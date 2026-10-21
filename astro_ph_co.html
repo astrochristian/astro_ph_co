@@ -12,64 +12,57 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" type="text/css" media="screen" href="/static/browse/0.3.4/css/arXiv.css?v=20260318" />
   <link rel="stylesheet" type="text/css" media="print" href="/static/browse/0.3.4/css/arXiv-print.css?v=20260924" />
-  <link rel="stylesheet" type="text/css" media="screen" href="/static/browse/0.3.4/css/browse_search.css" /><link rel="stylesheet" type="text/css" href="/static/base/1.0.1/css/arxiv-header-footer.css?v=20260929" />
-  <script language="javascript" src="/static/browse/0.3.4/js/accordion.js" ></script>
-  <script language="javascript" src="/static/browse/0.3.4/js/optin-modal.js?v=20250819"></script>
-  
-  <script src="/static/browse/0.3.4/js/mathjaxToggle.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="/static/browse/0.3.4/css/browse_search.css" />
+<link rel="stylesheet" href="https://static.arxiv.org/static/design-system/latest/design-system-components.css">
+<link rel="stylesheet" href="https://static.arxiv.org/static/design-system/latest/fonts.css">  <script language="javascript" src="/static/browse/0.3.4/js/accordion.js" ></script>
+  <script language="javascript" src="/static/browse/0.3.4/js/optin-modal.js?v=20250819"></script><script src="/static/browse/0.3.4/js/mathjaxToggle.min.js" type="text/javascript"></script>
   <script type="text/javascript" language="javascript">mathjaxToggle();</script>
 </head>
 
 <body ><div class="flex-wrap-footer">
     <a href="#content" class="ds-skip-link">Skip to main content</a>
-  
-  
-  
-<header class="ds-site-header">
+<div id="ds-announcement"></div>
+<script src="https://static.arxiv.org/static/design-system/latest/chrome/banner.js" defer></script>
+<script src="https://static.arxiv.org/static/design-system/latest/chrome/header.js" defer></script>
+<header class="ds-site-header ">
   <a aria-hidden="true" tabindex="-1" href="https://arxiv.org/IgnoreMe" class="is-sr-only"></a>
-
   <a href="https://arxiv.org/" class="ds-site-header-logo" aria-label="archive home">
-    <img src="/static/base/1.0.1/images/arxiv-logo-primary-light.svg" alt="archive">
+    <img src="https://static.arxiv.org/static/design-system/latest/logos/arxiv-logo.svg" alt="archive">
   </a>
-
+  <a id="ds-search-toggle" class="ds-site-header-search-link" href="https://arxiv.org/search" aria-controls="ds-search-overlay" aria-expanded="false">
+    <svg class="ds-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <circle cx="11" cy="11" r="8"/>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <span>Search</span>
+  </a>
   <button type="button" id="ds-nav-toggle" class="ds-site-header-nav-toggle"
     aria-label="Open menu" aria-controls="ds-site-header-nav" aria-expanded="false">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-      <line x1="3" y1="6" x2="21" y2="6"/>
-      <line x1="3" y1="12" x2="21" y2="12"/>
-      <line x1="3" y1="18" x2="21" y2="18"/>
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
     </svg>
   </button>
-
-  <nav class="ds-site-header-nav" id="ds-site-header-nav" aria-label="Main navigation"><a id="arxiv-search-toggle" href="https://arxiv.org/search"
-      aria-controls="arxiv-search-overlay" aria-expanded="false">
-      <svg class="ds-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-        <circle cx="11" cy="11" r="8"/>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-      </svg>
-      Search
-    </a>
-    <a href="https://arxiv.org/user/create">Submit</a>
+  <nav class="ds-site-header-nav" id="ds-site-header-nav" aria-label="Main navigation">
+    <a href="https://arxiv.org/submit">Submit</a>
     <a href="https://info.arxiv.org/about/donate.html">Donate</a>
     <span class="ds-site-header-divider" aria-hidden="true"></span>
-      <a href="https://arxiv.org/login" class="ds-site-header-login">Log in</a>
-  </nav>
+<a href="https://arxiv.org/login" class="ds-site-header-login">Log in</a>  </nav>
 </header>
-
-<div class="arxiv-search-overlay" id="arxiv-search-overlay" hidden>
-  <div class="arxiv-search-panel" role="search">
+<div class="ds-search-overlay" id="ds-search-overlay" hidden>
+  <div class="ds-search-overlay-panel" role="search">
     <form method="GET" action="https://arxiv.org/search">
-      <label for="arxiv-search-input" class="is-sr-only">Search arXiv</label>
-      <input type="text" name="query" id="arxiv-search-input" autocomplete="off"
+      <label for="ds-search-input" class="is-sr-only">Search arXiv</label>
+      <input type="text" name="query" id="ds-search-input" class="ds-input" autocomplete="off"
         placeholder="Search papers by title, author, abstract, or ID...">
       <input type="hidden" name="searchtype" value="all">
       <input type="hidden" name="source" value="header">
     </form>
-    <div class="arxiv-search-hint">
+    <p class="ds-hint">
       Press Enter to search &middot; <a href="https://arxiv.org/search/advanced">Advanced search</a>
-    </div>
+    </p>
   </div>
 </div>
+
     <main>
       <div id="content">
 <div id='content-inner'>
@@ -80,27 +73,27 @@
   <ul>
 <li>
         <a href="/list/astro-ph.CO/recent?skip=0&amp;show=1000">
+          Wed, 21 Oct 2026
+        </a>
+      </li><li>
+        <a href="/list/astro-ph.CO/recent?skip=27&amp;show=1000">
           Tue, 20 Oct 2026
         </a>
       </li><li>
-        <a href="/list/astro-ph.CO/recent?skip=28&amp;show=1000">
+        <a href="/list/astro-ph.CO/recent?skip=55&amp;show=1000">
           Mon, 19 Oct 2026
         </a>
       </li><li>
-        <a href="/list/astro-ph.CO/recent?skip=51&amp;show=1000">
+        <a href="/list/astro-ph.CO/recent?skip=78&amp;show=1000">
           Fri, 16 Oct 2026
         </a>
       </li><li>
-        <a href="/list/astro-ph.CO/recent?skip=78&amp;show=1000">
-          Thu, 15 Oct 2026
-        </a>
-      </li><li>
         <a href="/list/astro-ph.CO/recent?skip=105&amp;show=1000">
-          Wed, 14 Oct 2026
+          Thu, 15 Oct 2026
         </a>
       </li></ul>
   <p>See today's <a id="new-astro-ph.CO" aria-labelledby="new-astro-ph.CO" href="/list/astro-ph.CO/new">new</a> changes</p>
-      <div class='paging'>Total of 142 entries 
+      <div class='paging'>Total of 132 entries 
     </div>
     <div class='morefewer'>Showing up to 1000 entries per page:
           <a href=/list/astro-ph.CO/pastweek?skip=0&amp;show=500 rel="nofollow">
@@ -115,11 +108,734 @@
 
 
       <dl id='articles'>
-    <h3>Tue, 20 Oct 2026 (showing 28 of 28 entries )</h3>
+    <h3>Wed, 21 Oct 2026 (showing 27 of 27 entries )</h3>
 
 
     <dt>
       <a name='item1'>[1]</a>
+      <a href ="/abs/2610.28608" title="Abstract" id="2610.28608">
+        arXiv:2610.28608
+      </a>
+      
+        [<a href="/pdf/2610.28608" title="Download PDF" id="pdf-2610.28608" aria-labelledby="pdf-2610.28608">pdf</a>, <a href="https://arxiv.org/html/2610.28608v1" title="View HTML" id="html-2610.28608" aria-labelledby="html-2610.28608" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.28608" title="Other formats" id="oth-2610.28608" aria-labelledby="oth-2610.28608">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Slow-Roll Inflation at Arbitrary Order
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Giar%C3%A8,+W">William Giarè</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          33 pages. Companion code and results available at <a href="https://github.com/williamgiare/slow-roll-inflation" rel="external noopener nofollow" class="link-external link-https">this https URL</a>
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; General Relativity and Quantum Cosmology (gr-qc); High Energy Physics - Theory (hep-th)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item2'>[2]</a>
+      <a href ="/abs/2610.27933" title="Abstract" id="2610.27933">
+        arXiv:2610.27933
+      </a>
+      
+        [<a href="/pdf/2610.27933" title="Download PDF" id="pdf-2610.27933" aria-labelledby="pdf-2610.27933">pdf</a>, <a href="https://arxiv.org/html/2610.27933v1" title="View HTML" id="html-2610.27933" aria-labelledby="html-2610.27933" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27933" title="Other formats" id="oth-2610.27933" aria-labelledby="oth-2610.27933">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Probing Minihalos in the Late Dark Ages through Velocity Acoustic Oscillations in the 21-cm Power Spectrum
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Dong,+Y">Yan Dong</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Yue,+B">Bin Yue</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Zhang,+C">Chen Zhang</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wen,+Y">Yuewei Wen</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Xu,+Y">Yidong Xu</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ibitoye,+A">Ayodeji Ibitoye</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Chen,+X">Xuelei Chen</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          17 pages, 10 figures, 0 tables. Accepted for publication in ApJ
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item3'>[3]</a>
+      <a href ="/abs/2610.27282" title="Abstract" id="2610.27282">
+        arXiv:2610.27282
+      </a>
+      
+        [<a href="/pdf/2610.27282" title="Download PDF" id="pdf-2610.27282" aria-labelledby="pdf-2610.27282">pdf</a>, <a href="https://arxiv.org/html/2610.27282v1" title="View HTML" id="html-2610.27282" aria-labelledby="html-2610.27282" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27282" title="Other formats" id="oth-2610.27282" aria-labelledby="oth-2610.27282">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          The Future of Gamma-Ray Bursts as Probes of the Epoch of Reionization in the Era of JWST and the Extremely Large Telescope
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Fausey,+H">H.M. Fausey</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=van+der+Horst,+A">A.J. van der Horst</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Tanvir,+N">N.R. Tanvir</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wiersema,+K">K. Wiersema</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          15 pages, 15 figure, submitted to MNRAS
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item4'>[4]</a>
+      <a href ="/abs/2610.27236" title="Abstract" id="2610.27236">
+        arXiv:2610.27236
+      </a>
+      
+        [<a href="/pdf/2610.27236" title="Download PDF" id="pdf-2610.27236" aria-labelledby="pdf-2610.27236">pdf</a>, <a href="https://arxiv.org/html/2610.27236v1" title="View HTML" id="html-2610.27236" aria-labelledby="html-2610.27236" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27236" title="Other formats" id="oth-2610.27236" aria-labelledby="oth-2610.27236">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Searching for Dense Perturbers in Cold Dark Matter Simulations
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Zhang,+X">Xingyu Zhang</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Yu,+H">Hai-Bo Yu</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kong,+D">Demao Kong</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=O.Nadler,+E">Ethan O.Nadler</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          10 pages, 7 figures
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; Astrophysics of Galaxies (astro-ph.GA); High Energy Physics - Phenomenology (hep-ph)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item5'>[5]</a>
+      <a href ="/abs/2610.27209" title="Abstract" id="2610.27209">
+        arXiv:2610.27209
+      </a>
+      
+        [<a href="/pdf/2610.27209" title="Download PDF" id="pdf-2610.27209" aria-labelledby="pdf-2610.27209">pdf</a>, <a href="https://arxiv.org/html/2610.27209v1" title="View HTML" id="html-2610.27209" aria-labelledby="html-2610.27209" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27209" title="Other formats" id="oth-2610.27209" aria-labelledby="oth-2610.27209">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Are Dynamical Dark-Energy Cosmologies Old Enough?
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Sousa-Neto,+A">Agripino Sousa-Neto</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Landau,+S+J">Susana J. Landau</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Alcaniz,+J">Jailson Alcaniz</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          5 pages, 3 figures
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item6'>[6]</a>
+      <a href ="/abs/2610.27088" title="Abstract" id="2610.27088">
+        arXiv:2610.27088
+      </a>
+      
+        [<a href="/pdf/2610.27088" title="Download PDF" id="pdf-2610.27088" aria-labelledby="pdf-2610.27088">pdf</a>, <a href="https://arxiv.org/html/2610.27088v1" title="View HTML" id="html-2610.27088" aria-labelledby="html-2610.27088" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27088" title="Other formats" id="oth-2610.27088" aria-labelledby="oth-2610.27088">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          DDELenS: Tomographic Weak Lensing Simulations with Dynamical Dark Energy
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Chen,+S">Shu-Fan Chen</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hill,+J+C">J. Colin Hill</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Haiman,+Z">Zoltán Haiman</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          13 pages, 9 figures. The simulation data will be made publicly available upon acceptance of this manuscript. Comments welcome!
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item7'>[7]</a>
+      <a href ="/abs/2610.27068" title="Abstract" id="2610.27068">
+        arXiv:2610.27068
+      </a>
+      
+        [<a href="/pdf/2610.27068" title="Download PDF" id="pdf-2610.27068" aria-labelledby="pdf-2610.27068">pdf</a>, <a href="https://arxiv.org/html/2610.27068v1" title="View HTML" id="html-2610.27068" aria-labelledby="html-2610.27068" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27068" title="Other formats" id="oth-2610.27068" aria-labelledby="oth-2610.27068">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          ASTROLABE: A 3D Particle-Level Surrogate for Cosmology Simulation with Physical Flow Matching
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Elsharkawy,+I">Ibrahim Elsharkawy</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Curtin,+D">David Curtin</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kahn,+Y">Yonatan Kahn</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Weiner,+N">Neal Weiner</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          24 pages + 7 appendix (31 total), 20 figures, 11 tables
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item8'>[8]</a>
+      <a href ="/abs/2610.27009" title="Abstract" id="2610.27009">
+        arXiv:2610.27009
+      </a>
+      
+        [<a href="/pdf/2610.27009" title="Download PDF" id="pdf-2610.27009" aria-labelledby="pdf-2610.27009">pdf</a>, <a href="https://arxiv.org/html/2610.27009v1" title="View HTML" id="html-2610.27009" aria-labelledby="html-2610.27009" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27009" title="Other formats" id="oth-2610.27009" aria-labelledby="oth-2610.27009">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Gamma-ray Bursts as Cosmological Probes Calibrated with Strongly Lensed Quasars and Neural Networks
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hong,+W">Wei Hong</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Izzo,+L">Luca Izzo</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Della+Valle,+M">Massimo Della Valle</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Luongo,+O">Orlando Luongo</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Muccino,+M">Marco Muccino</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Zhang,+T">Tong-Jie Zhang</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          20 pages, 16 figures, 11 tables
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; High Energy Astrophysical Phenomena (astro-ph.HE); General Relativity and Quantum Cosmology (gr-qc)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item9'>[9]</a>
+      <a href ="/abs/2610.26990" title="Abstract" id="2610.26990">
+        arXiv:2610.26990
+      </a>
+      
+        [<a href="/pdf/2610.26990" title="Download PDF" id="pdf-2610.26990" aria-labelledby="pdf-2610.26990">pdf</a>, <a href="https://arxiv.org/html/2610.26990v1" title="View HTML" id="html-2610.26990" aria-labelledby="html-2610.26990" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.26990" title="Other formats" id="oth-2610.26990" aria-labelledby="oth-2610.26990">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Euclid Bypass end-to-end simulations for spectroscopic galaxy clustering performance assessment
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Euclid+Collaboration">Euclid Collaboration</a>: <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Granett,+B+R">B. R. Granett</a> (1), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=de+la+Torre,+S">S. de la Torre</a> (2), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Moresco,+M">M. Moresco</a> (3 and 4), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Farina,+A">A. Farina</a> (1 and 5), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bethermin,+M">M. Bethermin</a> (6), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Zabelle,+B">B. Zabelle</a> (7), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bruton,+S">S. Bruton</a> (8), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Markovic,+K">K. Markovic</a> (9), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Risso,+I">I. Risso</a> (10 and 5 and 1), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lee,+S">S. Lee</a> (9 and 11), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=McCarthy,+K+S">K. S. McCarthy</a> (9 and 12), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ilbert,+O">O. Ilbert</a> (2), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Brun,+V+L">V. Le Brun</a> (2), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Monaco,+P">P. Monaco</a> (13 and 14 and 15 and 16), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Nedkova,+K+V">K. V. Nedkova</a> (17), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Scarlata,+C">C. Scarlata</a> (7), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Guzzo,+L">L. Guzzo</a> (18 and 1 and 19), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Percival,+W+J">W. J. Percival</a> (20 and 21 and 22), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wang,+Y">Y. Wang</a> (17), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ca%C3%B1as-Herrera,+G">G. Cañas-Herrera</a> (23), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Sirignano,+C">C. Sirignano</a> (24 and 25), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Altieri,+B">B. Altieri</a> (26), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Andreon,+S">S. Andreon</a> (1), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Auricchio,+N">N. Auricchio</a> (4), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Baccigalupi,+C">C. Baccigalupi</a> (16 and 14 and 15 and 27), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Baldi,+M">M. Baldi</a> (28 and 4 and 29), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bardelli,+S">S. Bardelli</a> (4), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Battaglia,+P">P. Battaglia</a> (4), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Biviano,+A">A. Biviano</a> (14 and 16), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bolzonella,+M">M. Bolzonella</a> (4), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Branchini,+E">E. Branchini</a> (10 and 5 and 1), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Brescia,+M">M. Brescia</a> (30 and 31), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Brinchmann,+J">J. Brinchmann</a> (32 and 33 and 34), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Camera,+S">S. Camera</a> (35 and 36 and 37), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Capobianco,+V">V. Capobianco</a> (37), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Carbone,+C">C. Carbone</a> (38), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Carretero,+J">J. Carretero</a> (39 and 40), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Castellano,+M">M. Castellano</a> (41), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Castignani,+G">G. Castignani</a> (4), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Cavuoti,+S">S. Cavuoti</a> (31 and 42), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Chabaud,+P">P.-Y. Chabaud</a> (2), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Cimatti,+A">A. Cimatti</a> (43), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Colodro-Conde,+C">C. Colodro-Conde</a> (44), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Congedo,+G">G. Congedo</a> (45), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Conversi,+L">L. Conversi</a> (46 and 26), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Copin,+Y">Y. Copin</a> (47), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Costille,+A">A. Costille</a> (2), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Courbin,+F">F. Courbin</a> (48 and 49 and 50), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Courtois,+H+M">H. M. Courtois</a> (51), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Degaudenzi,+H">H. Degaudenzi</a> (52), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=De+Lucia,+G">G. De Lucia</a> (14), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Dole,+H">H. Dole</a> (53), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Dubath,+F">F. Dubath</a> (52), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Dupac,+X">X. Dupac</a> (26), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Dusini,+S">S. Dusini</a> (25), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Escoffier,+S">S. Escoffier</a> (54), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Farina,+M">M. Farina</a> (55), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Farinelli,+R">R. Farinelli</a> (4), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Faustini,+F">F. Faustini</a> (41), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ferriol,+S">S. Ferriol</a> (47), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Finelli,+F">F. Finelli</a> (4 and 56), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Fosalba,+P">P. Fosalba</a> (57 and 58), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Fotopoulou,+S">S. Fotopoulou</a> (59), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Fourmanoit,+N">N. Fourmanoit</a> (54), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Frailis,+M">M. Frailis</a> (14), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Franceschi,+E">E. Franceschi</a> (4), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gabarra,+L">L. Gabarra</a> (60), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Galeotta,+S">S. Galeotta</a> (14), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=George,+K">K. George</a> (61), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gillis,+B">B. Gillis</a> (45), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Giocoli,+C">C. Giocoli</a> (4 and 29), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gracia-Carpio,+J">J. Gracia-Carpio</a> (62), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Grazian,+A">A. Grazian</a> (63), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Grupp,+F">F. Grupp</a> (62 and 64), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Haugan,+S+V+H">S. V. H. Haugan</a> (65), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hemmati,+S">S. Hemmati</a> (17), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Holmes,+W">W. Holmes</a> (9), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hormuth,+F">F. Hormuth</a> (66), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hornstrup,+A">A. Hornstrup</a> (67 and 68), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Jahnke,+K">K. Jahnke</a> (69), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Jhabvala,+M">M. Jhabvala</a> (70), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Joachimi,+B">B. Joachimi</a> (71), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kermiche,+S">S. Kermiche</a> (54), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kiessling,+A">A. Kiessling</a> (9), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kubik,+B">B. Kubik</a> (47), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=K%C3%BCmmel,+M">M. Kümmel</a> (64), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kunz,+M">M. Kunz</a> (72), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kurki-Suonio,+H">H. Kurki-Suonio</a> (73 and 74), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Laureijs,+R">R. Laureijs</a> (75), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Brun,+A+M+C+L">A. M. C. Le Brun</a> (76), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ligori,+S">S. Ligori</a> (37), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lilje,+P+B">P. B. Lilje</a> (65), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lindholm,+V">V. Lindholm</a> (73 and 74), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lloro,+I">I. Lloro</a> (77), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Magliocchetti,+M">M. Magliocchetti</a> (55), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Mainetti,+G">G. Mainetti</a> (78), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Mansutti,+O">O. Mansutti</a> (14), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Marggraf,+O">O. Marggraf</a> (79), <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Martinelli,+M">M. Martinelli</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          Submitted to A&amp;A
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item10'>[10]</a>
+      <a href ="/abs/2610.28526" title="Abstract" id="2610.28526">
+        arXiv:2610.28526
+      </a>
+          (cross-list from hep-ph)
+
+        [<a href="/pdf/2610.28526" title="Download PDF" id="pdf-2610.28526" aria-labelledby="pdf-2610.28526">pdf</a>, <a href="https://arxiv.org/html/2610.28526v1" title="View HTML" id="html-2610.28526" aria-labelledby="html-2610.28526" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.28526" title="Other formats" id="oth-2610.28526" aria-labelledby="oth-2610.28526">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          MadStree: automated evaluation of tree-level de Sitter correlators
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Chen,+J">Jiaqi Chen</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Tao,+Y">Yi-Xiao Tao</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Wang,+X">Xinyi Wang</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Zhang,+D">Dong Zhang</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          68 pages, 9 figures, 5 tables
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); High Energy Physics - Theory (hep-th)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item11'>[11]</a>
+      <a href ="/abs/2610.28482" title="Abstract" id="2610.28482">
+        arXiv:2610.28482
+      </a>
+          (cross-list from astro-ph.IM)
+
+        [<a href="/pdf/2610.28482" title="Download PDF" id="pdf-2610.28482" aria-labelledby="pdf-2610.28482">pdf</a>, <a href="https://arxiv.org/html/2610.28482v1" title="View HTML" id="html-2610.28482" aria-labelledby="html-2610.28482" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.28482" title="Other formats" id="oth-2610.28482" aria-labelledby="oth-2610.28482">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          The &#34;Rubin 2036: Opportunities for Discovery&#34; Workshop: A Community Roadmap for the Future of the Vera C. Rubin Observatory After the LSST
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Malag%C3%B3n,+A+A+P">Andrés Alejandro Plazas Malagón</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Allen,+S">Steve Allen</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Anand,+S">Shreya Anand</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Awais,+M">Muhammad Awais</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Birrer,+S">Simon Birrer</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bleem,+L">Lindsey Bleem</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Blum,+R">Robert Blum</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bolton,+A+S">Adam S. Bolton</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bonito,+R">Rosaria Bonito</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Broughton,+A">Alex Broughton</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Carlin,+J+L">Jeffrey L. Carlin</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Castander,+F">Francisco Castander</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Chen,+R+C">Rebecca C. Chen</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Chiti,+A">Anirudh Chiti</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Choi,+L">Lyla Choi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Claver,+C">Chuck Claver</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Corley,+S">Suber Corley</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Crenshaw,+J+F">John Franklin Crenshaw</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Dey,+A">Arjun Dey</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Digel,+S">Seth Digel</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Drass,+H">Holger Drass</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Drlica-Wagner,+A">Alex Drlica-Wagner</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ebina,+H">Haruki Ebina</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Eisert,+L">Lukas Eisert</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Englert,+A">Anthony Englert</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Fanning,+K">Kevin Fanning</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Frieman,+J">Josh Frieman</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Fu,+S">Shenming Fu</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hazra,+N">Nandini Hazra</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Holt,+C+E">Carrie E. Holt</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hyun,+M">Minhee Hyun</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ullah,+H+I">Hafiz Inam Ullah</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Jha,+S">Saurabh Jha</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kalmbach,+J+B">J. Bryce Kalmbach</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kang,+Y">Yijung Kang</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kelkar,+K">Kshitija Kelkar</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kolwa,+S">Sthabile Kolwa</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kova%C4%8Devi%C4%87,+A">Andjelka Kovačević</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lin,+K+W">Kenneth W. Lin</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lin,+M">Meng-Xiang Lin</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Long,+B">Becky Long</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=MacBride,+S">Sean MacBride</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Malz,+A+I">Alex I. Malz</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Margheim,+S">Steve Margheim</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Mason,+N+J">Nigel J. Mason</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Homar,+G+M">Guillem Megias Homar</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Mei,+S">Simona Mei</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Miyatake,+H">Hironao Miyatake</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Moore,+M">Maia Moore</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Myles,+J">Justin Myles</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Newman,+J+A">Jeffrey A. Newman</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Nguyen,+A">Anh Nguyen</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ordenes-Brice%C3%B1o,+Y">Yasna Ordenes-Briceño</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Palmese,+A">Antonella Palmese</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Panda,+S">Swayamtrupta Panda</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Poppett,+C">Claire Poppett</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Nu%C3%B1ez,+F+P">Francisco Pozo Nuñez</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Raichoor,+A">Anand Raichoor</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Rasmussen,+A">Andrew Rasmussen</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Redden,+M">Maya Redden</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ritz,+S">Steve Ritz</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Roodman,+A">Aaron Roodman</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Sajkov,+L">Leonid Sajkov</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Sherwin,+B">Ben Sherwin</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Stalder,+B">Brian Stalder</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Stubbs,+C">Chris Stubbs</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Su%C3%A1rez-P%C3%A9rez,+J">John Suárez-Pérez</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Thomas,+S">Sandrine Thomas</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=To,+C">Chun-Hao To</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Tramuto,+A+S">Alessandro S. Tramuto</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Utsumi,+Y">Yousuke Utsumi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Venuti,+L">Laura Venuti</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wang,+H">Hai-Feng Wang</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wechsler,+R">Risa Wechsler</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Williams,+C+C">Christina C. Williams</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wood-Vasey,+W+M">W. Michael Wood-Vasey</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Yadav,+P">Prince Yadav</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Yamamoto,+M">Masaya Yamamoto</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          23 pages. Zenodo community: <a href="https://zenodo.org/communities/rubin2036workshop/" rel="external noopener nofollow" class="link-external link-https">this https URL</a> Workshop website: <a href="https://rubin-observatory.github.io/Rubin-Beyond-LSST/pages/Rubin2036proceedings/" rel="external noopener nofollow" class="link-external link-https">this https URL</a>
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Instrumentation and Methods for Astrophysics (astro-ph.IM)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item12'>[12]</a>
+      <a href ="/abs/2610.28014" title="Abstract" id="2610.28014">
+        arXiv:2610.28014
+      </a>
+          (cross-list from hep-ph)
+
+        [<a href="/pdf/2610.28014" title="Download PDF" id="pdf-2610.28014" aria-labelledby="pdf-2610.28014">pdf</a>, <a href="https://arxiv.org/html/2610.28014v1" title="View HTML" id="html-2610.28014" aria-labelledby="html-2610.28014" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.28014" title="Other formats" id="oth-2610.28014" aria-labelledby="oth-2610.28014">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Two-Component Dark Matter and Strongly First-Order Electroweak Phase Transition via a Two-Step Mechanism in the Inert Doublet plus Real Singlet Model
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Naik,+D+D">Deeksha Dattaram Naik</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Chaudhuri,+A">Arnab Chaudhuri</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          40 pages, 8 figures
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item13'>[13]</a>
+      <a href ="/abs/2610.28013" title="Abstract" id="2610.28013">
+        arXiv:2610.28013
+      </a>
+          (cross-list from astro-ph.GA)
+
+        [<a href="/pdf/2610.28013" title="Download PDF" id="pdf-2610.28013" aria-labelledby="pdf-2610.28013">pdf</a>, <a href="https://arxiv.org/html/2610.28013v1" title="View HTML" id="html-2610.28013" aria-labelledby="html-2610.28013" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.28013" title="Other formats" id="oth-2610.28013" aria-labelledby="oth-2610.28013">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Kinematically isolating intracluster light in AS1063: a distinct stellar population tracing the dark matter core
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bellhouse,+C">Callum Bellhouse</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bamford,+S">Steven Bamford</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hatch,+N">Nina Hatch</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kolcu,+T">Tutku Kolcu</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Richard,+J">Johan Richard</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          10 pages, 8 figures, submitted to MNRAS
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Astrophysics of Galaxies (astro-ph.GA)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item14'>[14]</a>
+      <a href ="/abs/2610.27731" title="Abstract" id="2610.27731">
+        arXiv:2610.27731
+      </a>
+          (cross-list from quant-ph)
+
+        [<a href="/pdf/2610.27731" title="Download PDF" id="pdf-2610.27731" aria-labelledby="pdf-2610.27731">pdf</a>, <a href="https://arxiv.org/html/2610.27731v1" title="View HTML" id="html-2610.27731" aria-labelledby="html-2610.27731" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27731" title="Other formats" id="oth-2610.27731" aria-labelledby="oth-2610.27731">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Axion detection in the non-Markovian noise
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/quant-ph?searchtype=author&amp;query=Dong,+J">Jing Dong</a>, <a href="https://arxiv.org/search/quant-ph?searchtype=author&amp;query=Ma,+S">Shuang-Quan Ma</a>, <a href="https://arxiv.org/search/quant-ph?searchtype=author&amp;query=Chen,+R">Rong-Hang Chen</a>, <a href="https://arxiv.org/search/quant-ph?searchtype=author&amp;query=Luo,+B">Bin-Kai Luo</a>, <a href="https://arxiv.org/search/quant-ph?searchtype=author&amp;query=Liu,+T">Tao Liu</a>, <a href="https://arxiv.org/search/quant-ph?searchtype=author&amp;query=Ai,+Q">Qing Ai</a>, <a href="https://arxiv.org/search/quant-ph?searchtype=author&amp;query=An,+J">Jun-Hong An</a></div>
+
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Quantum Physics (quant-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item15'>[15]</a>
+      <a href ="/abs/2610.27514" title="Abstract" id="2610.27514">
+        arXiv:2610.27514
+      </a>
+          (cross-list from gr-qc)
+
+        [<a href="/pdf/2610.27514" title="Download PDF" id="pdf-2610.27514" aria-labelledby="pdf-2610.27514">pdf</a>, <a href="https://arxiv.org/html/2610.27514v1" title="View HTML" id="html-2610.27514" aria-labelledby="html-2610.27514" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27514" title="Other formats" id="oth-2610.27514" aria-labelledby="oth-2610.27514">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Stability Analysis of Axion Dark Energy Model
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/gr-qc?searchtype=author&amp;query=Mukherjee,+A">Ankan Mukherjee</a>, <a href="https://arxiv.org/search/gr-qc?searchtype=author&amp;query=Roy,+N">Nandan Roy</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          15 pages, 3 figures. Accepted for Publication in General Relativity and Gravitation
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">General Relativity and Quantum Cosmology (gr-qc)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); High Energy Physics - Theory (hep-th)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item16'>[16]</a>
+      <a href ="/abs/2610.27131" title="Abstract" id="2610.27131">
+        arXiv:2610.27131
+      </a>
+          (cross-list from hep-ph)
+
+        [<a href="/pdf/2610.27131" title="Download PDF" id="pdf-2610.27131" aria-labelledby="pdf-2610.27131">pdf</a>, <a href="https://arxiv.org/html/2610.27131v1" title="View HTML" id="html-2610.27131" aria-labelledby="html-2610.27131" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27131" title="Other formats" id="oth-2610.27131" aria-labelledby="oth-2610.27131">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Illuminating Light Dark Matter with Fixed-Target Experiments
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Gray,+T+R">Taylor R. Gray</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          PhD thesis, Chalmers University of Technology, 2026. 148 pages, 34 figures
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); High Energy Physics - Experiment (hep-ex); Nuclear Theory (nucl-th)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item17'>[17]</a>
+      <a href ="/abs/2610.27101" title="Abstract" id="2610.27101">
+        arXiv:2610.27101
+      </a>
+          (cross-list from astro-ph.GA)
+
+        [<a href="/pdf/2610.27101" title="Download PDF" id="pdf-2610.27101" aria-labelledby="pdf-2610.27101">pdf</a>, <a href="https://arxiv.org/html/2610.27101v1" title="View HTML" id="html-2610.27101" aria-labelledby="html-2610.27101" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27101" title="Other formats" id="oth-2610.27101" aria-labelledby="oth-2610.27101">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Leviathan: a very massive, extended sub-millimetre galaxy spectroscopically confirmed at $\rm z = 4.05$
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Baker,+W+M">William M. Baker</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Valentino,+F">Francesco Valentino</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hjorth,+J">Jens Hjorth</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Brammer,+G">Gabriel Brammer</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Dudzevi%C4%8Di%C5%ABt%C4%97,+U">Ugnė Dudzevičiūtė</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ito,+K">Kei Ito</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Pensabene,+A">Antonio Pensabene</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Zhu,+P">Pengpei Zhu</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          4 pages, 3 figures, submitted as a A&amp;A letter
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Astrophysics of Galaxies (astro-ph.GA)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item18'>[18]</a>
+      <a href ="/abs/2610.27089" title="Abstract" id="2610.27089">
+        arXiv:2610.27089
+      </a>
+          (cross-list from hep-ph)
+
+        [<a href="/pdf/2610.27089" title="Download PDF" id="pdf-2610.27089" aria-labelledby="pdf-2610.27089">pdf</a>, <a href="https://arxiv.org/html/2610.27089v1" title="View HTML" id="html-2610.27089" aria-labelledby="html-2610.27089" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27089" title="Other formats" id="oth-2610.27089" aria-labelledby="oth-2610.27089">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Self-interacting dark matter from radiative bound-state-formation feedback
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Flores,+M+M">Marcos M. Flores</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Petraki,+K">Kalliopi Petraki</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Pignard,+T">Thomas Pignard</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          43 pages, 11 figures
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); Astrophysics of Galaxies (astro-ph.GA)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item19'>[19]</a>
+      <a href ="/abs/2610.27085" title="Abstract" id="2610.27085">
+        arXiv:2610.27085
+      </a>
+          (cross-list from stat.ME)
+
+        [<a href="/pdf/2610.27085" title="Download PDF" id="pdf-2610.27085" aria-labelledby="pdf-2610.27085">pdf</a>, <a href="https://arxiv.org/html/2610.27085v1" title="View HTML" id="html-2610.27085" aria-labelledby="html-2610.27085" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27085" title="Other formats" id="oth-2610.27085" aria-labelledby="oth-2610.27085">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Modular Bayesian Inference for Partially Misspecified Mixtures with Uncertain Class Labels
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/stat?searchtype=author&amp;query=Autenrieth,+M">Maximilian Autenrieth</a>, <a href="https://arxiv.org/search/stat?searchtype=author&amp;query=Karchev,+K">Konstantin Karchev</a>, <a href="https://arxiv.org/search/stat?searchtype=author&amp;query=van+Dyk,+D+A">David A. van Dyk</a>, <a href="https://arxiv.org/search/stat?searchtype=author&amp;query=Mandel,+K">Kaisey Mandel</a>, <a href="https://arxiv.org/search/stat?searchtype=author&amp;query=Trotta,+R">Roberto Trotta</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          16 pages, 8 figures; including supplementary material
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Methodology (stat.ME)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); Machine Learning (stat.ML)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item20'>[20]</a>
+      <a href ="/abs/2610.27082" title="Abstract" id="2610.27082">
+        arXiv:2610.27082
+      </a>
+          (cross-list from hep-ph)
+
+        [<a href="/pdf/2610.27082" title="Download PDF" id="pdf-2610.27082" aria-labelledby="pdf-2610.27082">pdf</a>, <a href="https://arxiv.org/html/2610.27082v1" title="View HTML" id="html-2610.27082" aria-labelledby="html-2610.27082" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27082" title="Other formats" id="oth-2610.27082" aria-labelledby="oth-2610.27082">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Cosmic birefringence from a stiff axion field and its cosmological implications
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Minotti,+A">Andrea Minotti</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Wu,+Y">Yunzhi Wu</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Zanzarella,+T">Tiziano Zanzarella</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Fornengo,+N">Nicolao Fornengo</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Regis,+M">Marco Regis</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Taoso,+M">Marco Taoso</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          9 pages, 6 figures
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item21'>[21]</a>
+      <a href ="/abs/2610.27081" title="Abstract" id="2610.27081">
+        arXiv:2610.27081
+      </a>
+          (cross-list from astro-ph.HE)
+
+        [<a href="/pdf/2610.27081" title="Download PDF" id="pdf-2610.27081" aria-labelledby="pdf-2610.27081">pdf</a>, <a href="https://arxiv.org/html/2610.27081v1" title="View HTML" id="html-2610.27081" aria-labelledby="html-2610.27081" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27081" title="Other formats" id="oth-2610.27081" aria-labelledby="oth-2610.27081">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Localizing binary neutron stars with the Einstein Telescope: a full Bayesian comparison of the triangular and 2L configurations
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Santoliquido,+F">Filippo Santoliquido</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Tissino,+J">Jacopo Tissino</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Branchesi,+M">Marica Branchesi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Dupletsa,+U">Ulyana Dupletsa</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          33 pages, 12 figures, 2 tables. To be submitted to JCAP
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">High Energy Astrophysical Phenomena (astro-ph.HE)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); Instrumentation and Methods for Astrophysics (astro-ph.IM); Solar and Stellar Astrophysics (astro-ph.SR); General Relativity and Quantum Cosmology (gr-qc)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item22'>[22]</a>
+      <a href ="/abs/2610.27075" title="Abstract" id="2610.27075">
+        arXiv:2610.27075
+      </a>
+          (cross-list from astro-ph.GA)
+
+        [<a href="/pdf/2610.27075" title="Download PDF" id="pdf-2610.27075" aria-labelledby="pdf-2610.27075">pdf</a>, <a href="https://arxiv.org/html/2610.27075v1" title="View HTML" id="html-2610.27075" aria-labelledby="html-2610.27075" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27075" title="Other formats" id="oth-2610.27075" aria-labelledby="oth-2610.27075">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Optical and Ultraviolet Emission from the Gas Photoionized by Gaia BH3: Archival Constraints and Predictions for the 2029 Periastron
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Cappelluti,+N">Nico Cappelluti</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Pacucci,+F">Fabio Pacucci</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          Submitted for publication in The Astrophysical Journal. 15 pages, 5 figures
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Astrophysics of Galaxies (astro-ph.GA)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); High Energy Astrophysical Phenomena (astro-ph.HE)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item23'>[23]</a>
+      <a href ="/abs/2610.27059" title="Abstract" id="2610.27059">
+        arXiv:2610.27059
+      </a>
+          (cross-list from hep-ph)
+
+        [<a href="/pdf/2610.27059" title="Download PDF" id="pdf-2610.27059" aria-labelledby="pdf-2610.27059">pdf</a>, <a href="https://arxiv.org/html/2610.27059v1" title="View HTML" id="html-2610.27059" aria-labelledby="html-2610.27059" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27059" title="Other formats" id="oth-2610.27059" aria-labelledby="oth-2610.27059">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          A Natural Dark Matter-Dark Energy Interaction from Axion-Monopole Dynamics
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Bagherian,+H">Hengameh Bagherian</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Reece,+M">Matthew Reece</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Wang,+L">Lian-Tao Wang</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Xiao,+H">Huangyu Xiao</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          44 pages, 5 figures
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); High Energy Physics - Theory (hep-th)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item24'>[24]</a>
+      <a href ="/abs/2610.27056" title="Abstract" id="2610.27056">
+        arXiv:2610.27056
+      </a>
+          (cross-list from hep-ph)
+
+        [<a href="/pdf/2610.27056" title="Download PDF" id="pdf-2610.27056" aria-labelledby="pdf-2610.27056">pdf</a>, <a href="https://arxiv.org/html/2610.27056v1" title="View HTML" id="html-2610.27056" aria-labelledby="html-2610.27056" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27056" title="Other formats" id="oth-2610.27056" aria-labelledby="oth-2610.27056">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Annihilation feedback on elastic scattering in self-interacting dark matter
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Petraki,+K">Kalliopi Petraki</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Pignard,+T">Thomas Pignard</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          60 pages, 17 figures
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); Astrophysics of Galaxies (astro-ph.GA)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item25'>[25]</a>
+      <a href ="/abs/2610.27051" title="Abstract" id="2610.27051">
+        arXiv:2610.27051
+      </a>
+          (cross-list from astro-ph.IM)
+
+        [<a href="/pdf/2610.27051" title="Download PDF" id="pdf-2610.27051" aria-labelledby="pdf-2610.27051">pdf</a>, <a href="https://arxiv.org/html/2610.27051v1" title="View HTML" id="html-2610.27051" aria-labelledby="html-2610.27051" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.27051" title="Other formats" id="oth-2610.27051" aria-labelledby="oth-2610.27051">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Graph Neural Networks for Astrophysics and Cosmology
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Jespersen,+C+K">Christian Kragh Jespersen</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          Main text contains 43 pages, 17 figures, and 2 tables. Invited review chapter for the edited book Machine Learning Techniques for Astrophysics and Cosmology (Eds. Cosimo Bambi, Vinay Kashyap, Swarnim Shashank, Naoki Yoshida, Springer)
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">Instrumentation and Methods for Astrophysics (astro-ph.IM)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); Astrophysics of Galaxies (astro-ph.GA); Machine Learning (cs.LG)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item26'>[26]</a>
+      <a href ="/abs/2610.26980" title="Abstract" id="2610.26980">
+        arXiv:2610.26980
+      </a>
+          (cross-list from gr-qc)
+
+        [<a href="/pdf/2610.26980" title="Download PDF" id="pdf-2610.26980" aria-labelledby="pdf-2610.26980">pdf</a>, <a href="https://arxiv.org/html/2610.26980v1" title="View HTML" id="html-2610.26980" aria-labelledby="html-2610.26980" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.26980" title="Other formats" id="oth-2610.26980" aria-labelledby="oth-2610.26980">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Elementary-Symmetric Ricci Gravity: Metric Formulation
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/gr-qc?searchtype=author&amp;query=Suo,+X">Xingpao Suo</a>, <a href="https://arxiv.org/search/gr-qc?searchtype=author&amp;query=Ma,+D">Dianxu Ma</a>, <a href="https://arxiv.org/search/gr-qc?searchtype=author&amp;query=Shan,+Y">Yuqiong Shan</a>, <a href="https://arxiv.org/search/gr-qc?searchtype=author&amp;query=Suo,+X">Xingyan Suo</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          12 pages, 2 figures
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">General Relativity and Quantum Cosmology (gr-qc)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO)
+        </div>
+
+      </div>
+    </dd>
+    <dt>
+      <a name='item27'>[27]</a>
+      <a href ="/abs/2610.26908" title="Abstract" id="2610.26908">
+        arXiv:2610.26908
+      </a>
+          (cross-list from hep-ph)
+
+        [<a href="/pdf/2610.26908" title="Download PDF" id="pdf-2610.26908" aria-labelledby="pdf-2610.26908">pdf</a>, <a href="https://arxiv.org/html/2610.26908v1" title="View HTML" id="html-2610.26908" aria-labelledby="html-2610.26908" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.26908" title="Other formats" id="oth-2610.26908" aria-labelledby="oth-2610.26908">other</a>]
+    </dt>
+    <dd>
+      <div class='meta'>
+        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
+          Floquet Instability of Photon-Axion Conversion
+        </div>
+        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Sugiyama,+Y">Yuuki Sugiyama</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Ueda,+K">Kazushige Ueda</a></div>
+
+        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
+          11 pages, 4 figures
+        </div>
+
+
+        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
+          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); Other Condensed Matter (cond-mat.other); General Relativity and Quantum Cosmology (gr-qc); High Energy Physics - Theory (hep-th)
+        </div>
+
+      </div>
+    </dd>
+</dl>
+
+      <dl id='articles'>
+    <h3>Tue, 20 Oct 2026 (showing 28 of 28 entries )</h3>
+
+
+    <dt>
+      <a name='item28'>[28]</a>
       <a href ="/abs/2610.26727" title="Abstract" id="2610.26727">
         arXiv:2610.26727
       </a>
@@ -145,7 +861,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item2'>[2]</a>
+      <a name='item29'>[29]</a>
       <a href ="/abs/2610.26669" title="Abstract" id="2610.26669">
         arXiv:2610.26669
       </a>
@@ -171,7 +887,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item3'>[3]</a>
+      <a name='item30'>[30]</a>
       <a href ="/abs/2610.26654" title="Abstract" id="2610.26654">
         arXiv:2610.26654
       </a>
@@ -197,7 +913,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item4'>[4]</a>
+      <a name='item31'>[31]</a>
       <a href ="/abs/2610.26639" title="Abstract" id="2610.26639">
         arXiv:2610.26639
       </a>
@@ -220,7 +936,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item5'>[5]</a>
+      <a name='item32'>[32]</a>
       <a href ="/abs/2610.26627" title="Abstract" id="2610.26627">
         arXiv:2610.26627
       </a>
@@ -246,7 +962,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item6'>[6]</a>
+      <a name='item33'>[33]</a>
       <a href ="/abs/2610.26493" title="Abstract" id="2610.26493">
         arXiv:2610.26493
       </a>
@@ -272,7 +988,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item7'>[7]</a>
+      <a name='item34'>[34]</a>
       <a href ="/abs/2610.26492" title="Abstract" id="2610.26492">
         arXiv:2610.26492
       </a>
@@ -298,7 +1014,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item8'>[8]</a>
+      <a name='item35'>[35]</a>
       <a href ="/abs/2610.26306" title="Abstract" id="2610.26306">
         arXiv:2610.26306
       </a>
@@ -324,7 +1040,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item9'>[9]</a>
+      <a name='item36'>[36]</a>
       <a href ="/abs/2610.26097" title="Abstract" id="2610.26097">
         arXiv:2610.26097
       </a>
@@ -350,7 +1066,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item10'>[10]</a>
+      <a name='item37'>[37]</a>
       <a href ="/abs/2610.25984" title="Abstract" id="2610.25984">
         arXiv:2610.25984
       </a>
@@ -376,7 +1092,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item11'>[11]</a>
+      <a name='item38'>[38]</a>
       <a href ="/abs/2610.25909" title="Abstract" id="2610.25909">
         arXiv:2610.25909
       </a>
@@ -402,7 +1118,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item12'>[12]</a>
+      <a name='item39'>[39]</a>
       <a href ="/abs/2610.25866" title="Abstract" id="2610.25866">
         arXiv:2610.25866
       </a>
@@ -428,7 +1144,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item13'>[13]</a>
+      <a name='item40'>[40]</a>
       <a href ="/abs/2610.25862" title="Abstract" id="2610.25862">
         arXiv:2610.25862
       </a>
@@ -451,7 +1167,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item14'>[14]</a>
+      <a name='item41'>[41]</a>
       <a href ="/abs/2610.25145" title="Abstract" id="2610.25145">
         arXiv:2610.25145
       </a>
@@ -477,7 +1193,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item15'>[15]</a>
+      <a name='item42'>[42]</a>
       <a href ="/abs/2610.24843" title="Abstract" id="2610.24843">
         arXiv:2610.24843
       </a>
@@ -503,7 +1219,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item16'>[16]</a>
+      <a name='item43'>[43]</a>
       <a href ="/abs/2610.24618" title="Abstract" id="2610.24618">
         arXiv:2610.24618
       </a>
@@ -529,7 +1245,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item17'>[17]</a>
+      <a name='item44'>[44]</a>
       <a href ="/abs/2610.24394" title="Abstract" id="2610.24394">
         arXiv:2610.24394
       </a>
@@ -555,7 +1271,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item18'>[18]</a>
+      <a name='item45'>[45]</a>
       <a href ="/abs/2610.24104" title="Abstract" id="2610.24104">
         arXiv:2610.24104
       </a>
@@ -578,7 +1294,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item19'>[19]</a>
+      <a name='item46'>[46]</a>
       <a href ="/abs/2610.24067" title="Abstract" id="2610.24067">
         arXiv:2610.24067
       </a>
@@ -604,7 +1320,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item20'>[20]</a>
+      <a name='item47'>[47]</a>
       <a href ="/abs/2610.24066" title="Abstract" id="2610.24066">
         arXiv:2610.24066
       </a>
@@ -630,22 +1346,22 @@
       </div>
     </dd>
     <dt>
-      <a name='item21'>[21]</a>
+      <a name='item48'>[48]</a>
       <a href ="/abs/2610.24064" title="Abstract" id="2610.24064">
         arXiv:2610.24064
       </a>
       
-        [<a href="/pdf/2610.24064" title="Download PDF" id="pdf-2610.24064" aria-labelledby="pdf-2610.24064">pdf</a>, <a href="https://arxiv.org/html/2610.24064v1" title="View HTML" id="html-2610.24064" aria-labelledby="html-2610.24064" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.24064" title="Other formats" id="oth-2610.24064" aria-labelledby="oth-2610.24064">other</a>]
+        [<a href="/pdf/2610.24064" title="Download PDF" id="pdf-2610.24064" aria-labelledby="pdf-2610.24064">pdf</a>, <a href="https://arxiv.org/html/2610.24064v2" title="View HTML" id="html-2610.24064" aria-labelledby="html-2610.24064" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.24064" title="Other formats" id="oth-2610.24064" aria-labelledby="oth-2610.24064">other</a>]
     </dt>
     <dd>
       <div class='meta'>
         <div class='list-title mathjax'><span class='descriptor'>Title:</span>
           Consistently Reproducing Early Galaxy Observations and 21-cm Signal during the Epoch of Reionization
         </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bianco,+M">Michele Bianco</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Giri,+S+K">Sambit K. Giri</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Basu%5Corcidlink,+A">Arghyadeep Basu\orcidlink</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Boschi,+T">Tommaso Boschi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Schneider,+A">Aurel Schneider</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Garaldi,+E">Enrico Garaldi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Mellema,+G">Garrelt Mellema</a></div>
+        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bianco,+M">Michele Bianco</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Giri,+S+K">Sambit K. Giri</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Basu,+A">Arghyadeep Basu</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Boschi,+T">Tommaso Boschi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Schneider,+A">Aurel Schneider</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Garaldi,+E">Enrico Garaldi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Mellema,+G">Garrelt Mellema</a></div>
 
         <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          17 pages, 12 figures, 2 tables
+          18 pages, 14 figures, 2 tables
         </div>
 
 
@@ -656,7 +1372,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item22'>[22]</a>
+      <a name='item49'>[49]</a>
       <a href ="/abs/2610.23997" title="Abstract" id="2610.23997">
         arXiv:2610.23997
       </a>
@@ -682,7 +1398,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item23'>[23]</a>
+      <a name='item50'>[50]</a>
       <a href ="/abs/2610.26482" title="Abstract" id="2610.26482">
         arXiv:2610.26482
       </a>
@@ -706,7 +1422,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item24'>[24]</a>
+      <a name='item51'>[51]</a>
       <a href ="/abs/2610.26080" title="Abstract" id="2610.26080">
         arXiv:2610.26080
       </a>
@@ -733,7 +1449,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item25'>[25]</a>
+      <a name='item52'>[52]</a>
       <a href ="/abs/2610.26014" title="Abstract" id="2610.26014">
         arXiv:2610.26014
       </a>
@@ -760,7 +1476,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item26'>[26]</a>
+      <a name='item53'>[53]</a>
       <a href ="/abs/2610.24092" title="Abstract" id="2610.24092">
         arXiv:2610.24092
       </a>
@@ -787,7 +1503,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item27'>[27]</a>
+      <a name='item54'>[54]</a>
       <a href ="/abs/2610.24070" title="Abstract" id="2610.24070">
         arXiv:2610.24070
       </a>
@@ -814,7 +1530,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item28'>[28]</a>
+      <a name='item55'>[55]</a>
       <a href ="/abs/2610.23999" title="Abstract" id="2610.23999">
         arXiv:2610.23999
       </a>
@@ -847,7 +1563,7 @@
 
 
     <dt>
-      <a name='item29'>[29]</a>
+      <a name='item56'>[56]</a>
       <a href ="/abs/2610.23828" title="Abstract" id="2610.23828">
         arXiv:2610.23828
       </a>
@@ -876,7 +1592,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item30'>[30]</a>
+      <a name='item57'>[57]</a>
       <a href ="/abs/2610.23808" title="Abstract" id="2610.23808">
         arXiv:2610.23808
       </a>
@@ -902,7 +1618,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item31'>[31]</a>
+      <a name='item58'>[58]</a>
       <a href ="/abs/2610.23806" title="Abstract" id="2610.23806">
         arXiv:2610.23806
       </a>
@@ -928,7 +1644,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item32'>[32]</a>
+      <a name='item59'>[59]</a>
       <a href ="/abs/2610.23657" title="Abstract" id="2610.23657">
         arXiv:2610.23657
       </a>
@@ -954,7 +1670,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item33'>[33]</a>
+      <a name='item60'>[60]</a>
       <a href ="/abs/2610.23567" title="Abstract" id="2610.23567">
         arXiv:2610.23567
       </a>
@@ -980,7 +1696,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item34'>[34]</a>
+      <a name='item61'>[61]</a>
       <a href ="/abs/2610.23564" title="Abstract" id="2610.23564">
         arXiv:2610.23564
       </a>
@@ -1006,7 +1722,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item35'>[35]</a>
+      <a name='item62'>[62]</a>
       <a href ="/abs/2610.23497" title="Abstract" id="2610.23497">
         arXiv:2610.23497
       </a>
@@ -1032,7 +1748,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item36'>[36]</a>
+      <a name='item63'>[63]</a>
       <a href ="/abs/2610.23401" title="Abstract" id="2610.23401">
         arXiv:2610.23401
       </a>
@@ -1058,7 +1774,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item37'>[37]</a>
+      <a name='item64'>[64]</a>
       <a href ="/abs/2610.23333" title="Abstract" id="2610.23333">
         arXiv:2610.23333
       </a>
@@ -1084,7 +1800,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item38'>[38]</a>
+      <a name='item65'>[65]</a>
       <a href ="/abs/2610.22819" title="Abstract" id="2610.22819">
         arXiv:2610.22819
       </a>
@@ -1110,7 +1826,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item39'>[39]</a>
+      <a name='item66'>[66]</a>
       <a href ="/abs/2610.22752" title="Abstract" id="2610.22752">
         arXiv:2610.22752
       </a>
@@ -1136,7 +1852,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item40'>[40]</a>
+      <a name='item67'>[67]</a>
       <a href ="/abs/2610.22648" title="Abstract" id="2610.22648">
         arXiv:2610.22648
       </a>
@@ -1162,7 +1878,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item41'>[41]</a>
+      <a name='item68'>[68]</a>
       <a href ="/abs/2610.23825" title="Abstract" id="2610.23825">
         arXiv:2610.23825
       </a>
@@ -1189,7 +1905,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item42'>[42]</a>
+      <a name='item69'>[69]</a>
       <a href ="/abs/2610.23821" title="Abstract" id="2610.23821">
         arXiv:2610.23821
       </a>
@@ -1213,7 +1929,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item43'>[43]</a>
+      <a name='item70'>[70]</a>
       <a href ="/abs/2610.23658" title="Abstract" id="2610.23658">
         arXiv:2610.23658
       </a>
@@ -1240,7 +1956,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item44'>[44]</a>
+      <a name='item71'>[71]</a>
       <a href ="/abs/2610.23606" title="Abstract" id="2610.23606">
         arXiv:2610.23606
       </a>
@@ -1264,7 +1980,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item45'>[45]</a>
+      <a name='item72'>[72]</a>
       <a href ="/abs/2610.23522" title="Abstract" id="2610.23522">
         arXiv:2610.23522
       </a>
@@ -1291,7 +2007,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item46'>[46]</a>
+      <a name='item73'>[73]</a>
       <a href ="/abs/2610.23340" title="Abstract" id="2610.23340">
         arXiv:2610.23340
       </a>
@@ -1318,7 +2034,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item47'>[47]</a>
+      <a name='item74'>[74]</a>
       <a href ="/abs/2610.23220" title="Abstract" id="2610.23220">
         arXiv:2610.23220
       </a>
@@ -1345,7 +2061,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item48'>[48]</a>
+      <a name='item75'>[75]</a>
       <a href ="/abs/2610.23218" title="Abstract" id="2610.23218">
         arXiv:2610.23218
       </a>
@@ -1372,7 +2088,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item49'>[49]</a>
+      <a name='item76'>[76]</a>
       <a href ="/abs/2610.23016" title="Abstract" id="2610.23016">
         arXiv:2610.23016
       </a>
@@ -1399,7 +2115,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item50'>[50]</a>
+      <a name='item77'>[77]</a>
       <a href ="/abs/2610.22506" title="Abstract" id="2610.22506">
         arXiv:2610.22506
       </a>
@@ -1426,7 +2142,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item51'>[51]</a>
+      <a name='item78'>[78]</a>
       <a href ="/abs/2610.20298" title="Abstract" id="2610.20298">
         arXiv:2610.20298
       </a>
@@ -1459,7 +2175,7 @@
 
 
     <dt>
-      <a name='item52'>[52]</a>
+      <a name='item79'>[79]</a>
       <a href ="/abs/2610.22128" title="Abstract" id="2610.22128">
         arXiv:2610.22128
       </a>
@@ -1485,7 +2201,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item53'>[53]</a>
+      <a name='item80'>[80]</a>
       <a href ="/abs/2610.21951" title="Abstract" id="2610.21951">
         arXiv:2610.21951
       </a>
@@ -1511,7 +2227,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item54'>[54]</a>
+      <a name='item81'>[81]</a>
       <a href ="/abs/2610.21722" title="Abstract" id="2610.21722">
         arXiv:2610.21722
       </a>
@@ -1537,7 +2253,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item55'>[55]</a>
+      <a name='item82'>[82]</a>
       <a href ="/abs/2610.21710" title="Abstract" id="2610.21710">
         arXiv:2610.21710
       </a>
@@ -1563,7 +2279,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item56'>[56]</a>
+      <a name='item83'>[83]</a>
       <a href ="/abs/2610.21235" title="Abstract" id="2610.21235">
         arXiv:2610.21235
       </a>
@@ -1589,7 +2305,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item57'>[57]</a>
+      <a name='item84'>[84]</a>
       <a href ="/abs/2610.20977" title="Abstract" id="2610.20977">
         arXiv:2610.20977
       </a>
@@ -1615,7 +2331,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item58'>[58]</a>
+      <a name='item85'>[85]</a>
       <a href ="/abs/2610.20720" title="Abstract" id="2610.20720">
         arXiv:2610.20720
       </a>
@@ -1641,7 +2357,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item59'>[59]</a>
+      <a name='item86'>[86]</a>
       <a href ="/abs/2610.20716" title="Abstract" id="2610.20716">
         arXiv:2610.20716
       </a>
@@ -1667,7 +2383,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item60'>[60]</a>
+      <a name='item87'>[87]</a>
       <a href ="/abs/2610.20702" title="Abstract" id="2610.20702">
         arXiv:2610.20702
       </a>
@@ -1693,7 +2409,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item61'>[61]</a>
+      <a name='item88'>[88]</a>
       <a href ="/abs/2610.22239" title="Abstract" id="2610.22239">
         arXiv:2610.22239
       </a>
@@ -1720,7 +2436,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item62'>[62]</a>
+      <a name='item89'>[89]</a>
       <a href ="/abs/2610.22197" title="Abstract" id="2610.22197">
         arXiv:2610.22197
       </a>
@@ -1747,7 +2463,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item63'>[63]</a>
+      <a name='item90'>[90]</a>
       <a href ="/abs/2610.22105" title="Abstract" id="2610.22105">
         arXiv:2610.22105
       </a>
@@ -1774,7 +2490,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item64'>[64]</a>
+      <a name='item91'>[91]</a>
       <a href ="/abs/2610.22096" title="Abstract" id="2610.22096">
         arXiv:2610.22096
       </a>
@@ -1801,7 +2517,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item65'>[65]</a>
+      <a name='item92'>[92]</a>
       <a href ="/abs/2610.21992" title="Abstract" id="2610.21992">
         arXiv:2610.21992
       </a>
@@ -1828,7 +2544,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item66'>[66]</a>
+      <a name='item93'>[93]</a>
       <a href ="/abs/2610.21817" title="Abstract" id="2610.21817">
         arXiv:2610.21817
       </a>
@@ -1855,7 +2571,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item67'>[67]</a>
+      <a name='item94'>[94]</a>
       <a href ="/abs/2610.21699" title="Abstract" id="2610.21699">
         arXiv:2610.21699
       </a>
@@ -1882,7 +2598,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item68'>[68]</a>
+      <a name='item95'>[95]</a>
       <a href ="/abs/2610.21658" title="Abstract" id="2610.21658">
         arXiv:2610.21658
       </a>
@@ -1909,7 +2625,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item69'>[69]</a>
+      <a name='item96'>[96]</a>
       <a href ="/abs/2610.21628" title="Abstract" id="2610.21628">
         arXiv:2610.21628
       </a>
@@ -1936,7 +2652,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item70'>[70]</a>
+      <a name='item97'>[97]</a>
       <a href ="/abs/2610.21441" title="Abstract" id="2610.21441">
         arXiv:2610.21441
       </a>
@@ -1963,7 +2679,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item71'>[71]</a>
+      <a name='item98'>[98]</a>
       <a href ="/abs/2610.21041" title="Abstract" id="2610.21041">
         arXiv:2610.21041
       </a>
@@ -1990,7 +2706,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item72'>[72]</a>
+      <a name='item99'>[99]</a>
       <a href ="/abs/2610.20919" title="Abstract" id="2610.20919">
         arXiv:2610.20919
       </a>
@@ -2017,7 +2733,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item73'>[73]</a>
+      <a name='item100'>[100]</a>
       <a href ="/abs/2610.20732" title="Abstract" id="2610.20732">
         arXiv:2610.20732
       </a>
@@ -2044,7 +2760,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item74'>[74]</a>
+      <a name='item101'>[101]</a>
       <a href ="/abs/2610.20729" title="Abstract" id="2610.20729">
         arXiv:2610.20729
       </a>
@@ -2071,7 +2787,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item75'>[75]</a>
+      <a name='item102'>[102]</a>
       <a href ="/abs/2610.20726" title="Abstract" id="2610.20726">
         arXiv:2610.20726
       </a>
@@ -2098,7 +2814,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item76'>[76]</a>
+      <a name='item103'>[103]</a>
       <a href ="/abs/2610.20710" title="Abstract" id="2610.20710">
         arXiv:2610.20710
       </a>
@@ -2125,7 +2841,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item77'>[77]</a>
+      <a name='item104'>[104]</a>
       <a href ="/abs/2610.18997" title="Abstract" id="2610.18997">
         arXiv:2610.18997
       </a>
@@ -2149,7 +2865,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item78'>[78]</a>
+      <a name='item105'>[105]</a>
       <a href ="/abs/2609.28637" title="Abstract" id="2609.28637">
         arXiv:2609.28637
       </a>
@@ -2182,7 +2898,7 @@
 
 
     <dt>
-      <a name='item79'>[79]</a>
+      <a name='item106'>[106]</a>
       <a href ="/abs/2610.20467" title="Abstract" id="2610.20467">
         arXiv:2610.20467
       </a>
@@ -2208,7 +2924,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item80'>[80]</a>
+      <a name='item107'>[107]</a>
       <a href ="/abs/2610.20378" title="Abstract" id="2610.20378">
         arXiv:2610.20378
       </a>
@@ -2231,7 +2947,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item81'>[81]</a>
+      <a name='item108'>[108]</a>
       <a href ="/abs/2610.20357" title="Abstract" id="2610.20357">
         arXiv:2610.20357
       </a>
@@ -2254,7 +2970,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item82'>[82]</a>
+      <a name='item109'>[109]</a>
       <a href ="/abs/2610.20325" title="Abstract" id="2610.20325">
         arXiv:2610.20325
       </a>
@@ -2277,7 +2993,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item83'>[83]</a>
+      <a name='item110'>[110]</a>
       <a href ="/abs/2610.20231" title="Abstract" id="2610.20231">
         arXiv:2610.20231
       </a>
@@ -2303,7 +3019,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item84'>[84]</a>
+      <a name='item111'>[111]</a>
       <a href ="/abs/2610.20184" title="Abstract" id="2610.20184">
         arXiv:2610.20184
       </a>
@@ -2326,7 +3042,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item85'>[85]</a>
+      <a name='item112'>[112]</a>
       <a href ="/abs/2610.20002" title="Abstract" id="2610.20002">
         arXiv:2610.20002
       </a>
@@ -2352,7 +3068,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item86'>[86]</a>
+      <a name='item113'>[113]</a>
       <a href ="/abs/2610.19891" title="Abstract" id="2610.19891">
         arXiv:2610.19891
       </a>
@@ -2378,7 +3094,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item87'>[87]</a>
+      <a name='item114'>[114]</a>
       <a href ="/abs/2610.19862" title="Abstract" id="2610.19862">
         arXiv:2610.19862
       </a>
@@ -2404,7 +3120,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item88'>[88]</a>
+      <a name='item115'>[115]</a>
       <a href ="/abs/2610.19598" title="Abstract" id="2610.19598">
         arXiv:2610.19598
       </a>
@@ -2430,7 +3146,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item89'>[89]</a>
+      <a name='item116'>[116]</a>
       <a href ="/abs/2610.19049" title="Abstract" id="2610.19049">
         arXiv:2610.19049
       </a>
@@ -2456,7 +3172,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item90'>[90]</a>
+      <a name='item117'>[117]</a>
       <a href ="/abs/2610.19001" title="Abstract" id="2610.19001">
         arXiv:2610.19001
       </a>
@@ -2482,7 +3198,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item91'>[91]</a>
+      <a name='item118'>[118]</a>
       <a href ="/abs/2610.18986" title="Abstract" id="2610.18986">
         arXiv:2610.18986
       </a>
@@ -2508,7 +3224,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item92'>[92]</a>
+      <a name='item119'>[119]</a>
       <a href ="/abs/2610.18981" title="Abstract" id="2610.18981">
         arXiv:2610.18981
       </a>
@@ -2534,7 +3250,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item93'>[93]</a>
+      <a name='item120'>[120]</a>
       <a href ="/abs/2610.18975" title="Abstract" id="2610.18975">
         arXiv:2610.18975
       </a>
@@ -2560,7 +3276,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item94'>[94]</a>
+      <a name='item121'>[121]</a>
       <a href ="/abs/2610.18957" title="Abstract" id="2610.18957">
         arXiv:2610.18957
       </a>
@@ -2586,7 +3302,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item95'>[95]</a>
+      <a name='item122'>[122]</a>
       <a href ="/abs/2610.20557" title="Abstract" id="2610.20557">
         arXiv:2610.20557
       </a>
@@ -2613,7 +3329,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item96'>[96]</a>
+      <a name='item123'>[123]</a>
       <a href ="/abs/2610.20507" title="Abstract" id="2610.20507">
         arXiv:2610.20507
       </a>
@@ -2640,7 +3356,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item97'>[97]</a>
+      <a name='item124'>[124]</a>
       <a href ="/abs/2610.20505" title="Abstract" id="2610.20505">
         arXiv:2610.20505
       </a>
@@ -2667,7 +3383,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item98'>[98]</a>
+      <a name='item125'>[125]</a>
       <a href ="/abs/2610.20167" title="Abstract" id="2610.20167">
         arXiv:2610.20167
       </a>
@@ -2691,7 +3407,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item99'>[99]</a>
+      <a name='item126'>[126]</a>
       <a href ="/abs/2610.20156" title="Abstract" id="2610.20156">
         arXiv:2610.20156
       </a>
@@ -2718,7 +3434,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item100'>[100]</a>
+      <a name='item127'>[127]</a>
       <a href ="/abs/2610.19440" title="Abstract" id="2610.19440">
         arXiv:2610.19440
       </a>
@@ -2745,7 +3461,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item101'>[101]</a>
+      <a name='item128'>[128]</a>
       <a href ="/abs/2610.19312" title="Abstract" id="2610.19312">
         arXiv:2610.19312
       </a>
@@ -2772,7 +3488,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item102'>[102]</a>
+      <a name='item129'>[129]</a>
       <a href ="/abs/2610.19030" title="Abstract" id="2610.19030">
         arXiv:2610.19030
       </a>
@@ -2799,7 +3515,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item103'>[103]</a>
+      <a name='item130'>[130]</a>
       <a href ="/abs/2610.19000" title="Abstract" id="2610.19000">
         arXiv:2610.19000
       </a>
@@ -2826,7 +3542,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item104'>[104]</a>
+      <a name='item131'>[131]</a>
       <a href ="/abs/2610.18968" title="Abstract" id="2610.18968">
         arXiv:2610.18968
       </a>
@@ -2853,7 +3569,7 @@
       </div>
     </dd>
     <dt>
-      <a name='item105'>[105]</a>
+      <a name='item132'>[132]</a>
       <a href ="/abs/2610.18962" title="Abstract" id="2610.18962">
         arXiv:2610.18962
       </a>
@@ -2881,983 +3597,8 @@
     </dd>
 </dl>
 
-      <dl id='articles'>
-    <h3>Wed, 14 Oct 2026 (showing 37 of 37 entries )</h3>
 
-
-    <dt>
-      <a name='item106'>[106]</a>
-      <a href ="/abs/2610.18748" title="Abstract" id="2610.18748">
-        arXiv:2610.18748
-      </a>
-      
-        [<a href="/pdf/2610.18748" title="Download PDF" id="pdf-2610.18748" aria-labelledby="pdf-2610.18748">pdf</a>, <a href="https://arxiv.org/html/2610.18748v1" title="View HTML" id="html-2610.18748" aria-labelledby="html-2610.18748" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.18748" title="Other formats" id="oth-2610.18748" aria-labelledby="oth-2610.18748">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Enabling Polyspectra via Stochastic Realizations of Inverse Decay Curvature Perturbations in Axion Inflation
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Reinhard,+M+A">Matthew A. Reinhard</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Slepian,+Z">Zachary Slepian</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Taruya,+A">Atsushi Taruya</a></div>
-
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; General Relativity and Quantum Cosmology (gr-qc)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item107'>[107]</a>
-      <a href ="/abs/2610.18707" title="Abstract" id="2610.18707">
-        arXiv:2610.18707
-      </a>
-      
-        [<a href="/pdf/2610.18707" title="Download PDF" id="pdf-2610.18707" aria-labelledby="pdf-2610.18707">pdf</a>, <a href="/format/2610.18707" title="Other formats" id="oth-2610.18707" aria-labelledby="oth-2610.18707">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Testing the 4-Point Correlation Function as a Probe of Parity Violation with the Quijote-Odd Simulations
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Leonard,+W+O">William Ortolá Leonard</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Slepian,+Z">Zachary Slepian</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Krolewski,+A">Alex Krolewski</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=May,+S">Simon May</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          11 Pages, 3 figures
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item108'>[108]</a>
-      <a href ="/abs/2610.18460" title="Abstract" id="2610.18460">
-        arXiv:2610.18460
-      </a>
-      
-        [<a href="/pdf/2610.18460" title="Download PDF" id="pdf-2610.18460" aria-labelledby="pdf-2610.18460">pdf</a>, <a href="https://arxiv.org/html/2610.18460v1" title="View HTML" id="html-2610.18460" aria-labelledby="html-2610.18460" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.18460" title="Other formats" id="oth-2610.18460" aria-labelledby="oth-2610.18460">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Constraints on the cosmic reheating history from PTA data
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Yang,+Q">Qi-Lin Yang</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wang,+S">Shi-Jie Wang</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Li,+N">Nan Li</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          15 pages, 9 figures
-        </div>
-
-        <div class='list-journal-ref'><span class='descriptor'>Journal-ref:</span>
-          Phys. Rev. D 114, 083520 (2026)
-        </div>
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item109'>[109]</a>
-      <a href ="/abs/2610.18348" title="Abstract" id="2610.18348">
-        arXiv:2610.18348
-      </a>
-      
-        [<a href="/pdf/2610.18348" title="Download PDF" id="pdf-2610.18348" aria-labelledby="pdf-2610.18348">pdf</a>, <a href="https://arxiv.org/html/2610.18348v1" title="View HTML" id="html-2610.18348" aria-labelledby="html-2610.18348" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.18348" title="Other formats" id="oth-2610.18348" aria-labelledby="oth-2610.18348">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Structure and evolution of cosmic voids within DESI DR1
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Monllor-Berbegal,+%C3%93">Óscar Monllor-Berbegal</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Planelles,+S">Susana Planelles</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Quilis,+V">Vicent Quilis</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          17 pages, 14 figures; accepted for publication in Astronomy &amp; Astrophysics
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item110'>[110]</a>
-      <a href ="/abs/2610.18036" title="Abstract" id="2610.18036">
-        arXiv:2610.18036
-      </a>
-      
-        [<a href="/pdf/2610.18036" title="Download PDF" id="pdf-2610.18036" aria-labelledby="pdf-2610.18036">pdf</a>, <a href="https://arxiv.org/html/2610.18036v1" title="View HTML" id="html-2610.18036" aria-labelledby="html-2610.18036" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.18036" title="Other formats" id="oth-2610.18036" aria-labelledby="oth-2610.18036">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Validation of harmonic-space likelihood methods for LiteBIRD B-mode polarisation analysis
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Galloni,+G">G. Galloni</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Campeti,+P">P. Campeti</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gimeno-Amo,+C">C. Gimeno-Amo</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Carones,+A">A. Carones</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Rizzieri,+A">A. Rizzieri</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Chinone,+Y">Y. Chinone</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Krachmalnicoff,+N">N. Krachmalnicoff</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Mart%C3%ADnez-Gonz%C3%A1lez,+E">E. Martínez-González</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Pagano,+L">L. Pagano</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Adak,+D">D. Adak</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Allys,+E">E. Allys</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Anand,+A">A. Anand</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Aryan,+K">K. Aryan</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Aumont,+J">J. Aumont</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Baccigalupi,+C">C. Baccigalupi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Banday,+A+J">A. J. Banday</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Barreiro,+R+B">R. B. Barreiro</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bartolo,+N">N. Bartolo</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Basyrov,+A">A. Basyrov</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bersanelli,+M">M. Bersanelli</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Besnard,+A">A. Besnard</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bouchet,+F">F. Bouchet</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Brancadori,+N">N. Brancadori</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Brinckmann,+T">T. Brinckmann</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Casas,+F+J">F. J. Casas</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gomar,+L+C">L. Castelló Gomar</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Colombo,+L">L. Colombo</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Columbro,+F">F. Columbro</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Coppolecchia,+A">A. Coppolecchia</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Cruz,+M">M. Cruz</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Cuttaia,+F">F. Cuttaia</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=de+Bernardis,+P">P. de Bernardis</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=de+la+Hoz,+E">E. de la Hoz</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=De+Lucia,+M">M. De Lucia</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Della+Torre,+S">S. Della Torre</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Demay,+C">C. Demay</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Diego-Palazuelos,+P">P. Diego-Palazuelos</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Garc%C3%ADa,+J+J+D">J. J. Díaz García</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Finelli,+F">F. Finelli</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Franceschet,+C">C. Franceschet</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Fuskeland,+U">U. Fuskeland</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Galloway,+M">M. Galloway</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ganga,+K">K. Ganga</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gerbino,+M">M. Gerbino</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ghigna,+T">T. Ghigna</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Giardiello,+S">S. Giardiello</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gjerl%C3%B8w,+E">E. Gjerløw</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gomes,+M">M. Gomes</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gruppuso,+A">A. Gruppuso</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Harper,+S+E">S. E. Harper</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hazumi,+M">M. Hazumi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Henrot-Versill%C3%A9,+S">S. Henrot-Versillé</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hergt,+L+T">L. T. Hergt</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hivon,+E">E. Hivon</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ikuma,+K">K. Ikuma</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ishino,+H">H. Ishino</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kohri,+K">K. Kohri</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lamagna,+L">L. Lamagna</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lattanzi,+M">M. Lattanzi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Leloup,+C">C. Leloup</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lembo,+M">M. Lembo</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Levrier,+F">F. Levrier</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lonappan,+A+I">A. I. Lonappan</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=L%C3%B3pez-Caniego,+M">M. López-Caniego</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Maino,+D">D. Maino</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Maranchery,+V">V. Maranchery</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Masi,+S">S. Masi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Matarrese,+S">S. Matarrese</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Micheli,+S">S. Micheli</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Migliaccio,+M">M. Migliaccio</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Monelli,+M">M. Monelli</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Montier,+L">L. Montier</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Morgante,+G">G. Morgante</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Morshed,+M">M. Morshed</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Mousset,+L">L. Mousset</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Najafi,+M">M. Najafi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Namikawa,+T">T. Namikawa</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Natoli,+P">P. Natoli</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Obata,+I">I. Obata</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Occhiuzzi,+A">A. Occhiuzzi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Paiella,+A">A. Paiella</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Paoletti,+D">D. Paoletti</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Paradiso,+S">S. Paradiso</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Pascual-Cisneros,+G">G. Pascual-Cisneros</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Piacentini,+F">F. Piacentini</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Piccirilli,+G">G. Piccirilli</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Pinchera,+M">M. Pinchera</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Polenta,+G">G. Polenta</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Porcelli,+L">L. Porcelli</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Reinecke,+M">M. Reinecke</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Remazeilles,+M">M. Remazeilles</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ritacco,+A">A. Ritacco</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Rubi%C3%B1o-Mart%C3%ADn,+J+A">J. A. Rubiño-Martín</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ruiz-Granda,+M">M. Ruiz-Granda</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Sakurai,+Y">Y. Sakurai</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Salvati,+L">L. Salvati</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Sanghavi,+J">J. Sanghavi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Scott,+D">D. Scott</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Shenoy,+D">D. Shenoy</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Shiraishi,+M">M. Shiraishi</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          42 pages, 17 figures, prepared for the submission to JCAP
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item111'>[111]</a>
-      <a href ="/abs/2610.18012" title="Abstract" id="2610.18012">
-        arXiv:2610.18012
-      </a>
-      
-        [<a href="/pdf/2610.18012" title="Download PDF" id="pdf-2610.18012" aria-labelledby="pdf-2610.18012">pdf</a>, <a href="https://arxiv.org/html/2610.18012v1" title="View HTML" id="html-2610.18012" aria-labelledby="html-2610.18012" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.18012" title="Other formats" id="oth-2610.18012" aria-labelledby="oth-2610.18012">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          CosmoForge II. An exact treatment of arbitrary linear filters in quadratic maximum-likelihood power spectrum estimation
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Galloni,+G">Giacomo Galloni</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          19 pages, 5 figures, prepared for submission to A&amp;A
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item112'>[112]</a>
-      <a href ="/abs/2610.17857" title="Abstract" id="2610.17857">
-        arXiv:2610.17857
-      </a>
-      
-        [<a href="/pdf/2610.17857" title="Download PDF" id="pdf-2610.17857" aria-labelledby="pdf-2610.17857">pdf</a>, <a href="https://arxiv.org/html/2610.17857v1" title="View HTML" id="html-2610.17857" aria-labelledby="html-2610.17857" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.17857" title="Other formats" id="oth-2610.17857" aria-labelledby="oth-2610.17857">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Mapping Dark Matter in Merging Clusters with Weak Lensing for CSST: Morphology and Filament Recovery
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Chen,+X">Xinyue Chen</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Li,+R">Ran Li</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wang,+Q">Qiao Wang</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lin,+H">Hengjie Lin</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gao,+L">Liang Gao</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Liu,+X">Xiangkun Liu</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Shan,+H">Huanyuan Shan</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Yao,+J">Ji Yao</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Li,+M">Ming Li</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          20 pages, 8 figures, 3 tables. Accepted for publication by APJ on 10/10/2026
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item113'>[113]</a>
-      <a href ="/abs/2610.17217" title="Abstract" id="2610.17217">
-        arXiv:2610.17217
-      </a>
-      
-        [<a href="/pdf/2610.17217" title="Download PDF" id="pdf-2610.17217" aria-labelledby="pdf-2610.17217">pdf</a>, <a href="https://arxiv.org/html/2610.17217v1" title="View HTML" id="html-2610.17217" aria-labelledby="html-2610.17217" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.17217" title="Other formats" id="oth-2610.17217" aria-labelledby="oth-2610.17217">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          MeV dark matter decay forecasts for the COSI mission
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Anthony-Petersen,+R">Robin Anthony-Petersen</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ning,+O">Orion Ning</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Watanabe,+Y">Yu Watanabe</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Safdi,+B+R">Benjamin R. Safdi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Dutra,+M">Maíra Dutra</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Calore,+F">Francesca Calore</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gallego,+S">Savitri Gallego</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Guan,+W">William Guan</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Karwin,+C+M">Christopher M. Karwin</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kusenko,+A">Alexander Kusenko</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Martinez-Castellanos,+I">Israel Martinez-Castellanos</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Matsumoto,+S">Shigeki Matsumoto</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Negro,+M">Michela Negro</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Oberlack,+U">Uwe Oberlack</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Rogers,+F+R">Field R. Rogers</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Siegert,+T">Thomas Siegert</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Takahashi,+T">Tadayuki Takahashi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Xie,+H">Haoyu Xie</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Yoneda,+H">Hiroki Yoneda</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Zoglauer,+A">Andreas Zoglauer</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Boggs,+S+E">Steven E. Boggs</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hartmann,+D+H">Dieter H. Hartmann</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kierans,+C+A">Carolyn A. Kierans</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Tomsick,+J+A">John A. Tomsick</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          20 pages, 11 figures
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; High Energy Astrophysical Phenomena (astro-ph.HE); High Energy Physics - Phenomenology (hep-ph)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item114'>[114]</a>
-      <a href ="/abs/2610.17200" title="Abstract" id="2610.17200">
-        arXiv:2610.17200
-      </a>
-      
-        [<a href="/pdf/2610.17200" title="Download PDF" id="pdf-2610.17200" aria-labelledby="pdf-2610.17200">pdf</a>, <a href="https://arxiv.org/html/2610.17200v1" title="View HTML" id="html-2610.17200" aria-labelledby="html-2610.17200" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.17200" title="Other formats" id="oth-2610.17200" aria-labelledby="oth-2610.17200">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Interpreting the stacked kinetic SZ signal II: the degeneracy between satellite galaxies and baryonic feedback
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ondaro-Mallea,+L">Lurdes Ondaro-Mallea</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hadzhiyska,+B">Boryana Hadzhiyska</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Angulo,+R+E">Raul E. Angulo</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          18 pages, 8 figures
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; Astrophysics of Galaxies (astro-ph.GA)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item115'>[115]</a>
-      <a href ="/abs/2610.17186" title="Abstract" id="2610.17186">
-        arXiv:2610.17186
-      </a>
-      
-        [<a href="/pdf/2610.17186" title="Download PDF" id="pdf-2610.17186" aria-labelledby="pdf-2610.17186">pdf</a>, <a href="https://arxiv.org/html/2610.17186v1" title="View HTML" id="html-2610.17186" aria-labelledby="html-2610.17186" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.17186" title="Other formats" id="oth-2610.17186" aria-labelledby="oth-2610.17186">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Beyond the Kullback--Leibler divergence: the likelihood-ratio distribution as a detectability measure
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Samandar,+A">Amirhossein Samandar</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Barandiaran,+M+M">Mikel Martin Barandiaran</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lu,+L+H">Linn Htat Lu</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Jaffe,+A+H">Andrew H. Jaffe</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Mihaylov,+D+P">Deyan P. Mihaylov</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Starkman,+G+D">Glenn D. Starkman</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Trendafilova,+C">Cynthia Trendafilova</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Akrami,+Y">Yashar Akrami</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Anselmi,+S">Stefano Anselmi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Duque,+J+C">Javier Carrón Duque</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Copi,+C+J">Craig J. Copi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Cornet-Gomez,+F">Fernando Cornet-Gomez</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kosowsky,+A">Arthur Kosowsky</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Negro,+A">Anna Negro</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Rodrigues,+R+G">Ricardo G. Rodrigues</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Tamosiunas,+A">Andrius Tamosiunas</a> (COMPACT Collaboration)</div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          22 pages, 5 figures, 1 table
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; Instrumentation and Methods for Astrophysics (astro-ph.IM); Data Analysis, Statistics and Probability (physics.data-an); Applications (stat.AP); Methodology (stat.ME)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item116'>[116]</a>
-      <a href ="/abs/2610.17022" title="Abstract" id="2610.17022">
-        arXiv:2610.17022
-      </a>
-      
-        [<a href="/pdf/2610.17022" title="Download PDF" id="pdf-2610.17022" aria-labelledby="pdf-2610.17022">pdf</a>, <a href="https://arxiv.org/html/2610.17022v1" title="View HTML" id="html-2610.17022" aria-labelledby="html-2610.17022" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.17022" title="Other formats" id="oth-2610.17022" aria-labelledby="oth-2610.17022">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          The Cosmic Radio Dipole and Observer Effects in SKA all-sky surveys
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bertacca,+D">D. Bertacca</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=B%C3%B6hme,+L">L. Böhme</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Baldi,+B+B">B. Bottazzi Baldi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Burigana,+C">C. Burigana</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Elkhashab,+M+Y">M. Y. Elkhashab</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hale,+C+L">C. L. Hale</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=von+Hausegger,+S">S. von Hausegger</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kl%C3%B6ckner,+H+R">H. R. Klöckner</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Land-Strykowski,+M">M. Land-Strykowski</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lewis,+G+F">G. F. Lewis</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Mittal,+V">V. Mittal</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Oayda,+O+T">O. T. Oayda</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Schwarz,+D+J">D. J. Schwarz</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Tiwari,+P">P. Tiwari</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Trombetti,+T">T. Trombetti</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wagenveld,+J+D">J. D. Wagenveld</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          Published in Advancing Astrophysics with the SKA II (AASKAII), 2026 (<a href="https://arxiv.org/abs/2606.20366" data-arxiv-id="2606.20366" class="link-https">arXiv:2606.20366</a>). Report-no:AASKAII/Bertacca01
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; Astrophysics of Galaxies (astro-ph.GA)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item117'>[117]</a>
-      <a href ="/abs/2610.16968" title="Abstract" id="2610.16968">
-        arXiv:2610.16968
-      </a>
-      
-        [<a href="/pdf/2610.16968" title="Download PDF" id="pdf-2610.16968" aria-labelledby="pdf-2610.16968">pdf</a>, <a href="https://arxiv.org/html/2610.16968v2" title="View HTML" id="html-2610.16968" aria-labelledby="html-2610.16968" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.16968" title="Other formats" id="oth-2610.16968" aria-labelledby="oth-2610.16968">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Self-Interacting Dark Matter: From Particle Physics Theories to Structure Formation Simulations
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Rosenlyst,+M">Martin Rosenlyst</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Tran,+V">Vinh Tran</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Zier,+O">Oliver Zier</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Shen,+X">Xuejian Shen</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Vogelsberger,+M">Mark Vogelsberger</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Brinckmann,+T">Thejs Brinckmann</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Frandsen,+M+T">Mads T. Frandsen</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Zavala,+J">Jesús Zavala</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Christensen,+F+H+D">Frederik Holt Dihver Christensen</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kristensen,+M+T">Mikkel Theiss Kristensen</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          96 pages, 44 figures, 6 tables
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; High Energy Astrophysical Phenomena (astro-ph.HE); High Energy Physics - Phenomenology (hep-ph); High Energy Physics - Theory (hep-th)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item118'>[118]</a>
-      <a href ="/abs/2610.16742" title="Abstract" id="2610.16742">
-        arXiv:2610.16742
-      </a>
-      
-        [<a href="/pdf/2610.16742" title="Download PDF" id="pdf-2610.16742" aria-labelledby="pdf-2610.16742">pdf</a>, <a href="https://arxiv.org/html/2610.16742v1" title="View HTML" id="html-2610.16742" aria-labelledby="html-2610.16742" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.16742" title="Other formats" id="oth-2610.16742" aria-labelledby="oth-2610.16742">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          A census of Dark Energy Survey Year 3 redMaPPer galaxy clusters in a high exposure eROSITA All Sky Survey region
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Giles,+P+A">P. A. Giles</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Romer,+A+K">A. K. Romer</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Pilling,+J">J. Pilling</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wilkinson,+R">R. Wilkinson</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Turner,+D+J">D. J. Turner</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Jeltema,+T">T. Jeltema</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Farahi,+A">A. Farahi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ramos-Ceja,+M+E">M. E. Ramos-Ceja</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Balzer,+F">F. Balzer</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kluge,+M">M. Kluge</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Grandis,+S">S. Grandis</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bulbul,+E">E. Bulbul</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hilton,+M">M. Hilton</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bhargava,+S">S. Bhargava</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Aljamal,+E">E. Aljamal</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Evrard,+A+E">A. E. Evrard</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Upsdell,+E+W">E. W. Upsdell</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Viana,+P+T+P">P. T. P. Viana</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Abdulghafour,+A">A. Abdulghafour</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Aguena,+M">M. Aguena</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Allam,+S+S">S. S. Allam</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Alves,+O">O. Alves</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Andrade-Oliveira,+F">F. Andrade-Oliveira</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bacon,+D">D. Bacon</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Brooks,+D">D. Brooks</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Camilleri,+R">R. Camilleri</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Rosell,+A+C">A. Carnero Rosell</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Carretero,+J">J. Carretero</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Costanzi,+M">M. Costanzi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=da+Costa,+L+N">L. N. da Costa</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=De+Vicente,+J">J. De Vicente</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Desai,+S">S. Desai</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Doel,+P">P. Doel</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Doux,+C">C. Doux</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Flaugher,+B">B. Flaugher</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Frieman,+J">J. Frieman</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Garc,+J">J. Garc</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gatti,+M">M. Gatti</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gruen,+D">D. Gruen</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gutierrez,+G">G. Gutierrez</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hinton,+S+R">S. R. Hinton</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hollowood,+D+L">D. L. Hollowood</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Honscheid,+K">K. Honscheid</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Kuehn,+K">K. Kuehn</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lahav,+O">O. Lahav</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lee,+S">S. Lee</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Marshall,+J+L">J. L. Marshall</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Mena-Fern%C3%A1ndez,+J">J. Mena-Fernández</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Menanteau,+F">F. Menanteau</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Miquel,+R">R. Miquel</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Nichol,+R+C">R. C. Nichol</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ogando,+R+L+C">R. L. C. Ogando</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Malag%C3%B3n,+A+A+P">A. A. Plazas Malagón</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Samuroff,+S">S. Samuroff</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Sanchez,+E">E. Sanchez</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Cid,+D+S">D. Sanchez Cid</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Smith,+M">M. Smith</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=da+Silva+Pereira,+M+E">M. E. da Silva Pereira</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Soares-Santos,+M">M. Soares-Santos</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Suchyta,+E">E. Suchyta</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Swanson,+M+E+C">M. E. C. Swanson</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=To,+C">C. To</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Tucker,+D+L">D. L. Tucker</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Vikram,+V">V. Vikram</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Walker,+A+R">A. R. Walker</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Weaverdyck,+N">N. Weaverdyck</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Weller,+J">J. Weller</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          Accepted 2026 August 24. Received 2026 August 24; in original form 2026 February 20
-        </div>
-
-        <div class='list-journal-ref'><span class='descriptor'>Journal-ref:</span>
-          Monthly Notices of the Royal Astronomical Society 2026
-        </div>
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item119'>[119]</a>
-      <a href ="/abs/2610.16741" title="Abstract" id="2610.16741">
-        arXiv:2610.16741
-      </a>
-      
-        [<a href="/pdf/2610.16741" title="Download PDF" id="pdf-2610.16741" aria-labelledby="pdf-2610.16741">pdf</a>, <a href="https://arxiv.org/html/2610.16741v1" title="View HTML" id="html-2610.16741" aria-labelledby="html-2610.16741" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.16741" title="Other formats" id="oth-2610.16741" aria-labelledby="oth-2610.16741">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          The XMM Cluster Survey: Cross-Calibration of eROSITA and XMM using Dark Energy Survey Y3 Galaxy Clusters
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Pilling,+J+E">J. E. Pilling</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Turner,+D+J">D. J. Turner</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Giles,+P+A">P. A. Giles</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Romer,+A+K">A. K. Romer</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wilkinson,+R">R. Wilkinson</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Rooney,+P+J">P. J. Rooney</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hilton,+M">M. Hilton</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bhargava,+S">S. Bhargava</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Hall,+J">J. Hall</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wang,+R">R. Wang</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Abdulghafour,+A">A. Abdulghafour</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Maughan,+B+J">B. J. Maughan</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          Submitted for publication in MNRAS
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item120'>[120]</a>
-      <a href ="/abs/2610.16536" title="Abstract" id="2610.16536">
-        arXiv:2610.16536
-      </a>
-      
-        [<a href="/pdf/2610.16536" title="Download PDF" id="pdf-2610.16536" aria-labelledby="pdf-2610.16536">pdf</a>, <a href="https://arxiv.org/html/2610.16536v1" title="View HTML" id="html-2610.16536" aria-labelledby="html-2610.16536" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.16536" title="Other formats" id="oth-2610.16536" aria-labelledby="oth-2610.16536">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          CosmoAgent: AI Agent for Theoretical Cosmology
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Alexander,+S">Stephon Alexander</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gouskos,+L">Loukas Gouskos</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Koushiappas,+S+M">Savvas M. Koushiappas</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Niu,+C">Cooper Niu</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Sun,+W">Wenrong Sun</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          26 pages, 13 figures, 12 tables
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; General Relativity and Quantum Cosmology (gr-qc)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item121'>[121]</a>
-      <a href ="/abs/2610.16496" title="Abstract" id="2610.16496">
-        arXiv:2610.16496
-      </a>
-      
-        [<a href="/pdf/2610.16496" title="Download PDF" id="pdf-2610.16496" aria-labelledby="pdf-2610.16496">pdf</a>, <a href="https://arxiv.org/html/2610.16496v1" title="View HTML" id="html-2610.16496" aria-labelledby="html-2610.16496" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.16496" title="Other formats" id="oth-2610.16496" aria-labelledby="oth-2610.16496">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Sensitivity of calibration-free DESI DR2 BAO--supernova constraints to a distance-duality tilt
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Fay,+S">Stéphane Fay</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Artola,+M">Mikel Artola</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Perivolaropoulos,+L">Leandros Perivolaropoulos</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          15 pages, 5 figures. The numerical analysis files for the production of the results and figures can be found in the following GitHub repository: <a href="https://github.com/Rivillion/Sensitivity_test_distance_duality" rel="external noopener nofollow" class="link-external link-https">this https URL</a>
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; General Relativity and Quantum Cosmology (gr-qc); High Energy Physics - Phenomenology (hep-ph); High Energy Physics - Theory (hep-th)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item122'>[122]</a>
-      <a href ="/abs/2610.16194" title="Abstract" id="2610.16194">
-        arXiv:2610.16194
-      </a>
-      
-        [<a href="/pdf/2610.16194" title="Download PDF" id="pdf-2610.16194" aria-labelledby="pdf-2610.16194">pdf</a>, <a href="https://arxiv.org/html/2610.16194v1" title="View HTML" id="html-2610.16194" aria-labelledby="html-2610.16194" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.16194" title="Other formats" id="oth-2610.16194" aria-labelledby="oth-2610.16194">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Detectability of 21-cm Power Spectra from the Epoch of Reionization using Modern Radio Telescopes
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Koochaksaraei,+A+B">Ali Bagheri Koochaksaraei</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Mobahat,+L">Lily Mobahat</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gholamhosseinian,+S">Sara Gholamhosseinian</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Firouzjaee,+J+T">Javad T. Firouzjaee</a></div>
-
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item123'>[123]</a>
-      <a href ="/abs/2610.15999" title="Abstract" id="2610.15999">
-        arXiv:2610.15999
-      </a>
-      
-        [<a href="/pdf/2610.15999" title="Download PDF" id="pdf-2610.15999" aria-labelledby="pdf-2610.15999">pdf</a>, <a href="https://arxiv.org/html/2610.15999v2" title="View HTML" id="html-2610.15999" aria-labelledby="html-2610.15999" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.15999" title="Other formats" id="oth-2610.15999" aria-labelledby="oth-2610.15999">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          How much can shape degeneracies affect the Hubble constant measurement?
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Meena,+A+K">Ashish K. Meena</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Saha,+P">Prasenjit Saha</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Williams,+L+L+R">Liliya L. R. Williams</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Perera,+D">Derek Perera</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          8 pages, 2 figures. Comments are welcome!
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item124'>[124]</a>
-      <a href ="/abs/2610.15536" title="Abstract" id="2610.15536">
-        arXiv:2610.15536
-      </a>
-      
-        [<a href="/pdf/2610.15536" title="Download PDF" id="pdf-2610.15536" aria-labelledby="pdf-2610.15536">pdf</a>, <a href="https://arxiv.org/html/2610.15536v1" title="View HTML" id="html-2610.15536" aria-labelledby="html-2610.15536" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.15536" title="Other formats" id="oth-2610.15536" aria-labelledby="oth-2610.15536">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Joint Constraints on the Hubble Constant and Cosmic Baryon Density from Localized Fast Radio Bursts and DESI DR2 Baryon Acoustic Oscillations
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Zhang,+J">Ji-Guo Zhang</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Li,+T">Tian-Nuo Li</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Du,+G">Guo-Hong Du</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Sun,+W">Wan-Peng Sun</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Zhang,+J">Jing-Fei Zhang</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Zhang,+X">Xin Zhang</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          15 pages, 4 figures, 5 tables
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; General Relativity and Quantum Cosmology (gr-qc); High Energy Physics - Phenomenology (hep-ph)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item125'>[125]</a>
-      <a href ="/abs/2610.14881" title="Abstract" id="2610.14881">
-        arXiv:2610.14881
-      </a>
-      
-        [<a href="/pdf/2610.14881" title="Download PDF" id="pdf-2610.14881" aria-labelledby="pdf-2610.14881">pdf</a>, <a href="https://arxiv.org/html/2610.14881v1" title="View HTML" id="html-2610.14881" aria-labelledby="html-2610.14881" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.14881" title="Other formats" id="oth-2610.14881" aria-labelledby="oth-2610.14881">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          TDCOSMO 2026: new insights on the Hubble tension from strong lensing time delays
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=TDCOSMO+Collaboration">TDCOSMO Collaboration</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Birrer,+S">Simon Birrer</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Cappellari,+M">Michele Cappellari</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Courbin,+F">Frédéric Courbin</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Fassnacht,+C+D">Christopher D. Fassnacht</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Fleury,+P">Pierre Fleury</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Frieman,+J+A">Joshua A. Frieman</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Galan,+A">Aymeric Galan</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Huang,+X">Xiang-Yu Huang</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Johnson,+D+P">Daniel P. Johnson</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Khanolkar,+S">Sanjana Khanolkar</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Knabel,+S">Shawn Knabel</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Krizic,+H">Hrvoje Krizic</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Millon,+M">Martin Millon</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Morishita,+T">Takahiro Morishita</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Motta,+V">Veronica Motta</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Mozumdar,+P">Pritom Mozumdar</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Paic,+E">Eric Paic</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Paugnat,+H">Hadrien Paugnat</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Schweinfurth,+A+G">Allan G. Schweinfurth</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Shajib,+A+J">Anowar J. Shajib</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Sheu,+W">William Sheu</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Sluse,+D">Dominique Sluse</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Stiavelli,+M">Massimo Stiavelli</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Suyu,+S+H">Sherry H. Suyu</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Treu,+T">Tommaso Treu</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Urcelay,+F">Felipe Urcelay</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Williams,+D+M">Devon M. Williams</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wong,+K+C">Kenneth C. Wong</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          Submitted to PRL. 11 pages, 3 figures
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item126'>[126]</a>
-      <a href ="/abs/2610.14806" title="Abstract" id="2610.14806">
-        arXiv:2610.14806
-      </a>
-      
-        [<a href="/pdf/2610.14806" title="Download PDF" id="pdf-2610.14806" aria-labelledby="pdf-2610.14806">pdf</a>, <a href="https://arxiv.org/html/2610.14806v1" title="View HTML" id="html-2610.14806" aria-labelledby="html-2610.14806" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.14806" title="Other formats" id="oth-2610.14806" aria-labelledby="oth-2610.14806">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Gravitational waves from strong first-order phase transitions in an expanding Universe
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Zou,+J">Jintao Zou</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Zhao,+Z">Zizhuo Zhao</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Jia,+Y">Yongtao Jia</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bian,+L">Ligong Bian</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          7+5 pages, 5+6 figures
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; General Relativity and Quantum Cosmology (gr-qc); High Energy Physics - Phenomenology (hep-ph)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item127'>[127]</a>
-      <a href ="/abs/2610.14781" title="Abstract" id="2610.14781">
-        arXiv:2610.14781
-      </a>
-      
-        [<a href="/pdf/2610.14781" title="Download PDF" id="pdf-2610.14781" aria-labelledby="pdf-2610.14781">pdf</a>, <a href="https://arxiv.org/html/2610.14781v1" title="View HTML" id="html-2610.14781" aria-labelledby="html-2610.14781" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.14781" title="Other formats" id="oth-2610.14781" aria-labelledby="oth-2610.14781">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          TDCOSMO 2026: A 3% measurement of the Hubble constant from strong lensing and stellar kinematics
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=TDCOSMO+Collaboration">TDCOSMO Collaboration</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Birrer,+S">Simon Birrer</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Cappellari,+M">Michele Cappellari</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Courbin,+F">Frédéric Courbin</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Fassnacht,+C+D">Christopher D. Fassnacht</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Fleury,+P">Pierre Fleury</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Frieman,+J+A">Joshua A. Frieman</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Galan,+A">Aymeric Galan</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Huang,+X">Xiang-Yu Huang</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Johnson,+D+P">Daniel P. Johnson</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Khanolkar,+S">Sanjana Khanolkar</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Knabel,+S">Shawn Knabel</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Krizic,+H">Hrvoje Krizic</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Millon,+M">Martin Millon</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Morishita,+T">Takahiro Morishita</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Motta,+V">Veronica Motta</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Mozumdar,+P">Pritom Mozumdar</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Paic,+E">Eric Paic</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Paugnat,+H">Hadrien Paugnat</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Schweinfurth,+A+G">Allan G. Schweinfurth</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Shajib,+A+J">Anowar J. Shajib</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Sheu,+W">William Sheu</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Sluse,+D">Dominique Sluse</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Stiavelli,+M">Massimo Stiavelli</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Suyu,+S+H">Sherry H. Suyu</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Treu,+T">Tommaso Treu</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Urcelay,+F">Felipe Urcelay</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Williams,+D+M">Devon M. Williams</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wong,+K+C">Kenneth C. Wong</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          Submitted to Physical Review D (PRD). The data and likelihoods will be made publicly available upon acceptance
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item128'>[128]</a>
-      <a href ="/abs/2610.14167" title="Abstract" id="2610.14167">
-        arXiv:2610.14167
-      </a>
-      
-        [<a href="/pdf/2610.14167" title="Download PDF" id="pdf-2610.14167" aria-labelledby="pdf-2610.14167">pdf</a>, <a href="https://arxiv.org/html/2610.14167v1" title="View HTML" id="html-2610.14167" aria-labelledby="html-2610.14167" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.14167" title="Other formats" id="oth-2610.14167" aria-labelledby="oth-2610.14167">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Where Cluster Galaxies Reside and How Strongly They Lens
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Dutra,+I">Isaque Dutra</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Natarajan,+P">Priyamvada Natarajan</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Roche,+C">Cian Roche</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          25 pages, 11 figures, 3 tables. Submitted to ApJ
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; Astrophysics of Galaxies (astro-ph.GA)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item129'>[129]</a>
-      <a href ="/abs/2610.14119" title="Abstract" id="2610.14119">
-        arXiv:2610.14119
-      </a>
-      
-        [<a href="/pdf/2610.14119" title="Download PDF" id="pdf-2610.14119" aria-labelledby="pdf-2610.14119">pdf</a>, <a href="https://arxiv.org/html/2610.14119v1" title="View HTML" id="html-2610.14119" aria-labelledby="html-2610.14119" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.14119" title="Other formats" id="oth-2610.14119" aria-labelledby="oth-2610.14119">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Ultralight scalars and invisible gravitons
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Giovannini,+M">Massimo Giovannini</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          42 pages, 9 figures
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Cosmology and Nongalactic Astrophysics (astro-ph.CO)</span>; General Relativity and Quantum Cosmology (gr-qc); High Energy Physics - Phenomenology (hep-ph); High Energy Physics - Theory (hep-th)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item130'>[130]</a>
-      <a href ="/abs/2610.18633" title="Abstract" id="2610.18633">
-        arXiv:2610.18633
-      </a>
-          (cross-list from astro-ph.HE)
-
-        [<a href="/pdf/2610.18633" title="Download PDF" id="pdf-2610.18633" aria-labelledby="pdf-2610.18633">pdf</a>, <a href="https://arxiv.org/html/2610.18633v1" title="View HTML" id="html-2610.18633" aria-labelledby="html-2610.18633" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.18633" title="Other formats" id="oth-2610.18633" aria-labelledby="oth-2610.18633">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          The ePESSTO+ census of ZTF nuclear transients. I. What flares in galactic nuclei?
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Concepci%C3%B3n,+E">E. Concepción</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Petrushevska,+T">T. Petrushevska</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Leloudas,+G">G. Leloudas</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ili%C4%87,+D">D. Ilić</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gromadzki,+M">M. Gromadzki</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Bhattacharyya,+S">S. Bhattacharyya</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Charalampopoulos,+P">P. Charalampopoulos</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Gomboc,+A">A. Gomboc</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ihanec,+N">N. Ihanec</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Nicholl,+M">M. Nicholl</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Pessi,+P+J">P. J. Pessi</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Young,+D+R">D. R. Young</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Wiseman,+P">P. Wiseman</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Chen,+T">T.-W. Chen</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Dennefeld,+M">M. Dennefeld</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Dgany,+Y">Y. Dgany</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Guti%C3%A9rrez,+C+P">C. P. Gutiérrez</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Inserra,+C">C. Inserra</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Makrygianni,+L">L. Makrygianni</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=M%C3%BCller-Bravo,+T+E">T. E. Müller-Bravo</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Nissen,+S">S. Nissen</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Onori,+F">F. Onori</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Roy,+R">R. Roy</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Quilt,+M">M. Quilt</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          11 pages, 10 figures, 2 tables
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">High Energy Astrophysical Phenomena (astro-ph.HE)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); Astrophysics of Galaxies (astro-ph.GA)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item131'>[131]</a>
-      <a href ="/abs/2610.18334" title="Abstract" id="2610.18334">
-        arXiv:2610.18334
-      </a>
-          (cross-list from hep-ph)
-
-        [<a href="/pdf/2610.18334" title="Download PDF" id="pdf-2610.18334" aria-labelledby="pdf-2610.18334">pdf</a>, <a href="https://arxiv.org/html/2610.18334v1" title="View HTML" id="html-2610.18334" aria-labelledby="html-2610.18334" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.18334" title="Other formats" id="oth-2610.18334" aria-labelledby="oth-2610.18334">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Cosmological Consequences of a Highly Decoupled Right-handed Neutrino
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=King,+S+F">Stephen F. King</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Roshan,+R">Rishav Roshan</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Show,+S">Sudipta Show</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          14 pages, 9 figures, 1 table. Comments are welcome
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item132'>[132]</a>
-      <a href ="/abs/2610.18234" title="Abstract" id="2610.18234">
-        arXiv:2610.18234
-      </a>
-          (cross-list from hep-ph)
-
-        [<a href="/pdf/2610.18234" title="Download PDF" id="pdf-2610.18234" aria-labelledby="pdf-2610.18234">pdf</a>, <a href="https://arxiv.org/html/2610.18234v1" title="View HTML" id="html-2610.18234" aria-labelledby="html-2610.18234" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.18234" title="Other formats" id="oth-2610.18234" aria-labelledby="oth-2610.18234">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Signature of GW from the Hidden Sector in light of the Recent LZ Event
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Sahoo,+S+K">Sujit Kumar Sahoo</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Sahu,+N">Narendra Sahu</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Thounaojam,+V+S">Vicky Singh Thounaojam</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          17 pages, 6 captioned figures, 2 tables
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); High Energy Physics - Experiment (hep-ex); High Energy Physics - Theory (hep-th)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item133'>[133]</a>
-      <a href ="/abs/2610.17647" title="Abstract" id="2610.17647">
-        arXiv:2610.17647
-      </a>
-          (cross-list from astro-ph.HE)
-
-        [<a href="/pdf/2610.17647" title="Download PDF" id="pdf-2610.17647" aria-labelledby="pdf-2610.17647">pdf</a>, <a href="https://arxiv.org/html/2610.17647v1" title="View HTML" id="html-2610.17647" aria-labelledby="html-2610.17647" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.17647" title="Other formats" id="oth-2610.17647" aria-labelledby="oth-2610.17647">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          The Promise of Gravitational-Wave Astronomy
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ajith,+P">Parameswaran Ajith</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          Invited review for the Focus Point on Surprises from Major New Telescopes (<a href="https://link.springer.com/collections/bdijcibaac" rel="external noopener nofollow" class="link-external link-https">this https URL</a>)
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">High Energy Astrophysical Phenomena (astro-ph.HE)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); General Relativity and Quantum Cosmology (gr-qc)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item134'>[134]</a>
-      <a href ="/abs/2610.17577" title="Abstract" id="2610.17577">
-        arXiv:2610.17577
-      </a>
-          (cross-list from astro-ph.GA)
-
-        [<a href="/pdf/2610.17577" title="Download PDF" id="pdf-2610.17577" aria-labelledby="pdf-2610.17577">pdf</a>, <a href="https://arxiv.org/html/2610.17577v1" title="View HTML" id="html-2610.17577" aria-labelledby="html-2610.17577" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.17577" title="Other formats" id="oth-2610.17577" aria-labelledby="oth-2610.17577">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Non-equilibrium chemistry and radiation hydrodynamics in metal-poor and metal-rich interstellar gas
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Menon,+S+H">Shyam H. Menon</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Sharda,+P">Piyush Sharda</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Burkhart,+B">Blakesley Burkhart</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Grassi,+T">Tommaso Grassi</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          23 pages, 12 figures (+ appendix). Submitted to AAS Journals; comments welcome
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Astrophysics of Galaxies (astro-ph.GA)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); Solar and Stellar Astrophysics (astro-ph.SR)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item135'>[135]</a>
-      <a href ="/abs/2610.17210" title="Abstract" id="2610.17210">
-        arXiv:2610.17210
-      </a>
-          (cross-list from hep-ph)
-
-        [<a href="/pdf/2610.17210" title="Download PDF" id="pdf-2610.17210" aria-labelledby="pdf-2610.17210">pdf</a>, <a href="https://arxiv.org/html/2610.17210v1" title="View HTML" id="html-2610.17210" aria-labelledby="html-2610.17210" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.17210" title="Other formats" id="oth-2610.17210" aria-labelledby="oth-2610.17210">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Dark Matter Stability from residual flavour symmetries
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Landini,+G">Giacomo Landini</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Marciano,+S">Simone Marciano</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Mescia,+F">Federico Mescia</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          20 pages, 2 figures, comments welcome!
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item136'>[136]</a>
-      <a href ="/abs/2610.17084" title="Abstract" id="2610.17084">
-        arXiv:2610.17084
-      </a>
-          (cross-list from hep-ph)
-
-        [<a href="/pdf/2610.17084" title="Download PDF" id="pdf-2610.17084" aria-labelledby="pdf-2610.17084">pdf</a>, <a href="https://arxiv.org/html/2610.17084v1" title="View HTML" id="html-2610.17084" aria-labelledby="html-2610.17084" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.17084" title="Other formats" id="oth-2610.17084" aria-labelledby="oth-2610.17084">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Decay-Assisted Leptogenesis during Preheating
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Zhao,+W">Wenbin Zhao</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          6 pages, 2 figures, comments are welcome
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item137'>[137]</a>
-      <a href ="/abs/2610.17013" title="Abstract" id="2610.17013">
-        arXiv:2610.17013
-      </a>
-          (cross-list from astro-ph.HE)
-
-        [<a href="/pdf/2610.17013" title="Download PDF" id="pdf-2610.17013" aria-labelledby="pdf-2610.17013">pdf</a>, <a href="https://arxiv.org/html/2610.17013v1" title="View HTML" id="html-2610.17013" aria-labelledby="html-2610.17013" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.17013" title="Other formats" id="oth-2610.17013" aria-labelledby="oth-2610.17013">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Indirect Dark Matter Detection in the Multi-Messenger Era: Experiments, Systematics, Anomalies, and Prospects for Discovery
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Ghaith,+M">Muad Ghaith</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Obaideen,+K">Khaled Obaideen</a></div>
-
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">High Energy Astrophysical Phenomena (astro-ph.HE)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); Astrophysics of Galaxies (astro-ph.GA); High Energy Physics - Phenomenology (hep-ph)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item138'>[138]</a>
-      <a href ="/abs/2610.16574" title="Abstract" id="2610.16574">
-        arXiv:2610.16574
-      </a>
-          (cross-list from stat.ML)
-
-        [<a href="/pdf/2610.16574" title="Download PDF" id="pdf-2610.16574" aria-labelledby="pdf-2610.16574">pdf</a>, <a href="https://arxiv.org/html/2610.16574v1" title="View HTML" id="html-2610.16574" aria-labelledby="html-2610.16574" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.16574" title="Other formats" id="oth-2610.16574" aria-labelledby="oth-2610.16574">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          $\texttt{NFDiag}$: High-dimensional MCMC Convergence Diagnosis with Normalizing Flows
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/stat?searchtype=author&amp;query=Nazl%C4%B1,+K">Kutay Nazlı</a>, <a href="https://arxiv.org/search/stat?searchtype=author&amp;query=Sellentin,+E">Elena Sellentin</a></div>
-
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">Machine Learning (stat.ML)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); Instrumentation and Methods for Astrophysics (astro-ph.IM); Machine Learning (cs.LG)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item139'>[139]</a>
-      <a href ="/abs/2610.16385" title="Abstract" id="2610.16385">
-        arXiv:2610.16385
-      </a>
-          (cross-list from hep-ph)
-
-        [<a href="/pdf/2610.16385" title="Download PDF" id="pdf-2610.16385" aria-labelledby="pdf-2610.16385">pdf</a>, <a href="https://arxiv.org/html/2610.16385v1" title="View HTML" id="html-2610.16385" aria-labelledby="html-2610.16385" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.16385" title="Other formats" id="oth-2610.16385" aria-labelledby="oth-2610.16385">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Nonequilibrium framework for first-order phase transitions
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Liu,+J">Jie Liu</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Bian,+L">Ligong Bian</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          32 pages, 2 figures
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); High Energy Physics - Theory (hep-th)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item140'>[140]</a>
-      <a href ="/abs/2610.15209" title="Abstract" id="2610.15209">
-        arXiv:2610.15209
-      </a>
-          (cross-list from hep-ph)
-
-        [<a href="/pdf/2610.15209" title="Download PDF" id="pdf-2610.15209" aria-labelledby="pdf-2610.15209">pdf</a>, <a href="https://arxiv.org/html/2610.15209v1" title="View HTML" id="html-2610.15209" aria-labelledby="html-2610.15209" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.15209" title="Other formats" id="oth-2610.15209" aria-labelledby="oth-2610.15209">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Cosmology &amp; Astrophysics of the Dark Dimension with Bulk Majorana Neutrinos
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Anchordoqui,+L+A">Luis A. Anchordoqui</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Vafa,+C">Cumrun Vafa</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          9 pages revtex
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); High Energy Physics - Theory (hep-th)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item141'>[141]</a>
-      <a href ="/abs/2610.14178" title="Abstract" id="2610.14178">
-        arXiv:2610.14178
-      </a>
-          (cross-list from hep-ph)
-
-        [<a href="/pdf/2610.14178" title="Download PDF" id="pdf-2610.14178" aria-labelledby="pdf-2610.14178">pdf</a>, <a href="https://arxiv.org/html/2610.14178v1" title="View HTML" id="html-2610.14178" aria-labelledby="html-2610.14178" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.14178" title="Other formats" id="oth-2610.14178" aria-labelledby="oth-2610.14178">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          Collider and direct detection as key probes of asymmetric dark matter: Signals from a compressed Inert Higgs doublet
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Cerde%C3%B1o,+D">David Cerdeño</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Escudero,+M">Miguel Escudero</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Ghedini,+P">Pietro Ghedini</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Guedes,+G">Guilherme Guedes</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Hambye,+T">Thomas Hambye</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Mu%C3%B1oz-Navarro,+A">Abel Muñoz-Navarro</a>, <a href="https://arxiv.org/search/hep-ph?searchtype=author&amp;query=Pressendo,+E">Elena Pressendo</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          27 pages, 14 Figures and 3 Tables. Comments welcome
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">High Energy Physics - Phenomenology (hep-ph)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); High Energy Physics - Experiment (hep-ex)
-        </div>
-
-      </div>
-    </dd>
-    <dt>
-      <a name='item142'>[142]</a>
-      <a href ="/abs/2610.14058" title="Abstract" id="2610.14058">
-        arXiv:2610.14058
-      </a>
-          (cross-list from astro-ph.HE)
-
-        [<a href="/pdf/2610.14058" title="Download PDF" id="pdf-2610.14058" aria-labelledby="pdf-2610.14058">pdf</a>, <a href="https://arxiv.org/html/2610.14058v1" title="View HTML" id="html-2610.14058" aria-labelledby="html-2610.14058" rel="noopener noreferrer" target="_blank">html</a>, <a href="/format/2610.14058" title="Other formats" id="oth-2610.14058" aria-labelledby="oth-2610.14058">other</a>]
-    </dt>
-    <dd>
-      <div class='meta'>
-        <div class='list-title mathjax'><span class='descriptor'>Title:</span>
-          An All-Sky Search for Moving Gamma-Ray Sources with Fermi-LAT
-        </div>
-        <div class='list-authors'><a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Lai,+D">Dou Lai</a>, <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Unwin,+J">James Unwin</a></div>
-
-        <div class='list-comments mathjax'><span class='descriptor'>Comments:</span>
-          23 pages, 10 figures, code available at <a href="https://github.com/jamesunwin/fermi-lat-moving-source-search" rel="external noopener nofollow" class="link-external link-https">this https URL</a>
-        </div>
-
-
-        <div class='list-subjects'><span class='descriptor'>Subjects:</span>
-          <span class="primary-subject">High Energy Astrophysical Phenomena (astro-ph.HE)</span>; Cosmology and Nongalactic Astrophysics (astro-ph.CO); Instrumentation and Methods for Astrophysics (astro-ph.IM); High Energy Physics - Phenomenology (hep-ph)
-        </div>
-
-      </div>
-    </dd>
-</dl>
-
-
-      <div class='paging'>Total of 142 entries 
+      <div class='paging'>Total of 132 entries 
     </div>
     <div class='morefewer'>Showing up to 1000 entries per page:
           <a href=/list/astro-ph.CO/pastweek?skip=0&amp;show=500 rel="nofollow">
@@ -3877,48 +3618,37 @@
   <div class="ds-site-footer-grid">
     <div class="ds-site-footer-main">
       <div class="ds-site-footer-ack">
-        We gratefully acknowledge support from
-        our <strong>major funders</strong>,
+        We gratefully acknowledge support from our <strong>major funders</strong>,
         <a href="https://info.arxiv.org/about/ourmembers.html"><strong>member institutions</strong></a><span class="ack-member-inline" hidden>, <strong></strong></span>,
         and all contributors.
       </div>
       <nav class="ds-site-footer-links" aria-label="Site navigation">
-        <a href="https://info.arxiv.org/about">About</a>
-        <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
-        <a href="https://info.arxiv.org/help">Help</a>
-        <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
-        <a href="https://info.arxiv.org/help/contact.html">Contact</a>
-        <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
-        <a href="https://info.arxiv.org/help/subscribe">Subscribe</a>
-        <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
-        <a href="https://info.arxiv.org/help/license/index.html">Copyright</a>
-        <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
-        <a href="https://info.arxiv.org/help/policies/privacy_policy.html">Privacy</a>
-        <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
-        <a href="https://info.arxiv.org/help/web_accessibility.html">Accessibility</a>
-        <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
-        <a href="https://status.arxiv.org" target="_blank" rel="noopener noreferrer">Operational Status<span class="is-sr-only"> (opens in new tab)</span></a>
+        <a href="https://info.arxiv.org/about">About</a> <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
+        <a href="https://info.arxiv.org/help">Help</a> <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
+        <a href="https://info.arxiv.org/help/contact.html">Contact</a> <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
+        <a href="https://info.arxiv.org/help/subscribe.html">Subscribe</a> <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
+        <a href="https://info.arxiv.org/help/license/index.html">Copyright</a> <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
+        <a href="https://info.arxiv.org/help/policies/privacy_policy.html">Privacy</a> <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
+        <a href="https://info.arxiv.org/help/web_accessibility.html">Accessibility</a> <span class="ds-site-footer-sep" aria-hidden="true">&middot;</span>
+        <a href="https://status.arxiv.org/" target="_blank" rel="noopener noreferrer">Operational Status<span class="is-sr-only"> (opens in new tab)</span></a>
       </nav>
     </div>
-
-    <div class="ds-site-footer-funders" aria-label="Major funders">
+    <div class="ds-site-footer-funders">
       <div class="ds-site-footer-funders-label">Major funding support from</div>
       <div class="ds-site-footer-funders-logos">
         <a class="ds-funder-link" href="https://www.simonsfoundation.org/" target="_blank" rel="noopener noreferrer">
-          <img class="ds-funder-logo" src="/static/base/1.0.1/images/funders/simons-foundation.png" alt="Simons Foundation">
+          <img class="ds-funder-logo" src="https://static.arxiv.org/static/design-system/latest/funders/simons-foundation.png" alt="Simons Foundation"><span class="is-sr-only"> (opens in new tab)</span>
         </a>
         <a class="ds-funder-link" href="https://www.sfi.org.bm/" target="_blank" rel="noopener noreferrer">
-          <img class="ds-funder-logo" src="/static/base/1.0.1/images/funders/simons-foundation-international.png" alt="Simons Foundation International">
+          <img class="ds-funder-logo" src="https://static.arxiv.org/static/design-system/latest/funders/simons-foundation-international.png" alt="Simons Foundation International"><span class="is-sr-only"> (opens in new tab)</span>
         </a>
         <a class="ds-funder-link" href="https://www.schmidtsciences.org/" target="_blank" rel="noopener noreferrer">
-          <img class="ds-funder-logo" src="/static/base/1.0.1/images/funders/schmidt-sciences.png" alt="Schmidt Sciences">
+          <img class="ds-funder-logo" src="https://static.arxiv.org/static/design-system/latest/funders/schmidt-sciences.png" alt="Schmidt Sciences"><span class="is-sr-only"> (opens in new tab)</span>
         </a>
       </div>
     </div>
   </div>
 </footer>  </div>
-
-  <script src="/static/base/1.0.1/js/arxiv-header.js?v=20260626"></script>
 
 </body>
 
